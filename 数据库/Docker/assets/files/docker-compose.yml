@@ -1,0 +1,45 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: p5tgb6tfc%^
+      POSTGRES_DB: iot
+    ports:
+      - '5432:5432'
+    volumes:
+      - $PWD/pg-data:/var/lib/postgresql/data
+    container_name: postgresql
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    restart: always
+    environment: 
+      PGADMIN_DEFAULT_EMAIL: iricbing@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: p5tgb6tfc%^ 
+    ports:
+      - "5433:80"
+    container_name: pgadmin
+      
+  mongodb:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - $PWD/mongo-data:/data
+    container_name: mongodb
+
+  redis:
+    image: "redis:alpine"
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - $PWD/redis-data:/var/lib/redis
+      - $PWD/redis.conf:/usr/local/etc/redis/redis.conf
+    environment:
+      - REDIS_REPLICATION_MODE=master
+    container_name: redis
