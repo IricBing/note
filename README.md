@@ -1,6 +1,8 @@
 # note
 个人笔记，仅供学习交流。
 
+流程图相关请使用vscode查看，安装[Markdown Preview Mermaid Support](https://github.com/mjbvz/vscode-markdown-mermaid)插件
+
 # 总纲
 - [编程语言](编程语言/README.md)
     - [JavaScript](编程语言/JavaScript/README.md)
@@ -39,8 +41,8 @@
     - [Ubuntu](Linux/Ubuntu/README.md)
         - [18.04特别篇](Linux/Ubuntu/18.04/README.md)
         - [20.04特别篇](Linux/Ubuntu/20.04/README.md)
+            - [软件安装](Linux/Ubuntu/20.04/软件安装/README.md)
         - [基本使用](Linux/Ubuntu/基本使用/README.md)
-        - [软件安装](Linux/Ubuntu/软件安装/README.md)
         - [bug修复](Linux/Ubuntu/bug修复/README.md)
 
 
