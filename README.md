@@ -21,6 +21,7 @@
     - [PostgreSQL](数据库/PostgreSQL/README.md)
 
 - [NodeJS](NodeJS/README.md)
+    - [NPM](NodeJS/NPM/README.md)
     - [NestJS](NodeJS/NestJS/README.md)
     - [Express](NodeJS/Express/README.md)
     - [Koa](NodeJS/Koa/README.md)
