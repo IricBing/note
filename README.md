@@ -25,7 +25,9 @@
     - [Express](NodeJS/Express/README.md)
     - [Koa](NodeJS/Koa/README.md)
 
-- [Emqx](Emqx/README.md)
+- [消息中间件](消息中间件/README.md)
+    - [Emqx](消息中间件/Emqx/README.md)
+    - [Kafka](消息中间件/Kafka/README.md)
 
 - [合宙](合宙/README.md)
     - [Luat](合宙/Luat/README.md)
