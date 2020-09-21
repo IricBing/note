@@ -26,7 +26,7 @@ RPC 可基于 HTTP 或 TCP 协议，Web Service 就是基于 HTTP 协议的 RPC�
 
 RPC采用 `C/S模式` 。请求程序就是一个客户机，而服务提供程序就是一个服务器。首先，客户机调用进程发送一个有进程参数的调用信息到服务进程，然后等待应答信息。在服务器端，进程保持睡眠状态直到调用信息的到达为止。当一个调用信息到达，服务器获得进程参数，计算结果发送答复信息，然后等待下一个调用信息。最后，客户端调用进程接收答复信息，获得进程结果，然后调用执行继续进行。
 
-![RPC调用流程](assets/images/RPC调用流程图.webp)
+![RPC调用流程](assets/images/RPC调用流程图.jpg)
 
 流程说明：
 
@@ -48,7 +48,7 @@ RPC的任务就是封装2-8步骤，使调用过程对调用方透明。
 
 线程A和线程B同时向client socket发送请求requestA和requestB，socket先后将requestB和requestA发送至server，而server可能将responseA先返回，尽管requestA请求到达时间更晚。我们需要一种机制保证responseA返回给ThreadA，responseB返回给ThreadB。
 
-![RPC顺序保持流程](assets/images/RPC顺序保持流程.webp)
+![RPC顺序保持流程](assets/images/RPC顺序保持流程.jpg)
 
 1. client线程每次通过socket调用远程接口前，生成一个唯一的ID，即requestID（requestID必需保证在一个Socket连接里面是唯一的），一般常常使用AtomicLong从0开始累计数字生成唯一ID；
 1. 将处理结果的回调对象callback，存放到全局ConcurrentHashMap里面put(requestID, callback)；
