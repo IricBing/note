@@ -2,15 +2,15 @@
 
 个人笔记，仅供学习交流。
 
-[Github地址](https://github.com/IricBing/note)
+[Github 地址](https://github.com/IricBing/note)
 
-[个人Gitlab地址](https://git.virtualbing.cn/Iric/note)
+[个人 Gitlab 地址](https://git.virtualbing.cn/Iric/note)
 
-同步更新，贴出两个地址的原因是：两个网站的Markdown支持不一致，GitHub不支持流程图，Gitlab不支持webp格式图片，如遇显示问题，可切换地址查看！
+同步更新，贴出两个地址的原因是：两个网站的 Markdown 支持不一致，GitHub 不支持流程图，Gitlab 不支持 webp 格式图片，如遇显示问题，可切换地址查看！
 
-流程图相关请使用 vscode 查看，安装[Markdown Preview Mermaid Support](https://github.com/mjbvz/vscode-markdown-mermaid)插件，[mermaid流程图语法](https://www.cnblogs.com/q735613050/p/9368331.html)
+流程图相关请使用 vscode 查看，安装[Markdown Preview Mermaid Support](https://github.com/mjbvz/vscode-markdown-mermaid)插件，[mermaid 流程图语法](https://www.cnblogs.com/q735613050/p/9368331.html)
 
-最兼容的查看方式：下载到本地，通过vscode查看！
+最兼容的查看方式：下载到本地，通过 vscode 查看！
 
 # 总纲
 
@@ -59,10 +59,11 @@
   - [Emqx](消息中间件/Emqx/README.md)
   - [Kafka](消息中间件/Kafka/README.md)
 
-- [合宙](合宙/README.md)
+- [硬件](硬件/README.md)
 
-  - [Luat](合宙/Luat/README.md)
-  - [SmartDTU (iRTU)](合宙/SmartDTU/README.md)
+  - [合宙](硬件/合宙/README.md)
+    - [Luat](硬件/合宙/Luat/README.md)
+    - [SmartDTU (iRTU)](硬件/合宙/SmartDTU/README.md)
 
 - [Linux](Linux/README.md)
 
