@@ -2,7 +2,7 @@
 
 个人笔记，仅供学习交流。
 
-流程图相关请使用 vscode 查看，安装[Markdown Preview Mermaid Support](https://github.com/mjbvz/vscode-markdown-mermaid)插件
+流程图相关请使用 vscode 查看，安装[Markdown Preview Mermaid Support](https://github.com/mjbvz/vscode-markdown-mermaid)插件，[mermaid流程图语法](https://www.cnblogs.com/q735613050/p/9368331.html)
 
 # 总纲
 
@@ -41,6 +41,8 @@
 
   - [NPM](NodeJS/NPM/README.md)
   - [NestJS](NodeJS/NestJS/README.md)
+    - [基础篇](NodeJS/NestJS/基础篇/README.md)
+    - [微服务篇](NodeJS/NestJS/微服务/README.md)
   - [Express](NodeJS/Express/README.md)
   - [Koa](NodeJS/Koa/README.md)
 
