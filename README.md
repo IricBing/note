@@ -61,6 +61,7 @@
 
 - [硬件](硬件/README.md)
 
+  - [基础概念](硬件/基础概念/README.md)
   - [合宙](硬件/合宙/README.md)
     - [Luat](硬件/合宙/Luat/README.md)
     - [SmartDTU (iRTU)](硬件/合宙/SmartDTU/README.md)
