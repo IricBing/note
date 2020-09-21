@@ -1,5 +1,5 @@
 # 硬件-合宙 篇
 
-- [Luat](Luat/README.md)
+* [Luat](Luat/README.md)
 
-- [SmartDTU](SmartDTU/README.md)
+* [SmartDTU](SmartDTU/README.md)
