@@ -119,7 +119,7 @@ bootstrap();
 
 ```
 
-先忽略注释，改代码的作用是启动混合服务，http+grpc服务，流程如下：
+先忽略注释，该代码的作用是启动混合服务，http+grpc服务，流程如下：
 
 ``` mermaid
 graph TD;
@@ -162,7 +162,7 @@ app.useGlobalFilters(new GrpcExceptionsFilter());
 await app.listenAsync();
 ```
 
-其中 `options.url` 就是用来配置程序占用端口的，通常为： `127.0.0.1:3300` or `0.0.0.0:3300` 。 `127.0.0.1` 表示这个服务 `只能本地调用` ，其他ip来源的请求直接过滤， `0.0.0.0` 表示 `任意来源` 的ip都可以调用。题外话：mysql，Postgresql，mongodb等数据库默认都是只能本机连接，其思想和这里的实现是一样的，注意多思考。
+其中 `options.url` 就是用来配置程序占用端口的，通常为： `127.0.0.1:3300` or `0.0.0.0:3300` 。 `127.0.0.1` 表示这个服务 `只能本地调用` ，其他ip来源的请求直接过滤， `0.0.0.0` 表示 `任意来源` 的ip都可以调用。题外话：mysql，Postgresql，mongodb等数据库默认都是只能本机连接，其思想和这里的设计思想是一样的，注意多思考。
 
 > `思考题？` 如果想要做仅能内网连接的，请求来源ip为127、192、10、172开头的允许访问，该如何设置？
 
@@ -323,7 +323,7 @@ export class HeroController implements OnModuleInit {
 
 这里讲解 `单向RPC(一元RPC)` 调用，findMany为 `双向流式 RPC` 请自行按照下面的思路研究。
 
-从http请求的 `@Get(':id') getById(@Param('id') id: string)` 方法开始，代码中仅有一行： `return this.heroService.findOne({ id: +id });` ，该代码调用了 `this.heroService.findOne()` 方法，此方法为grpc方法（PS：此处可以看出grpc的特点，单看这行代码，和我们正常调用一个service的方法写法上完全一致，这就是grpc的出发点！）。该方法如何做的呢？为什么仅此一行就实现了rpc调用？接下来在这个文件中看所有与 `heroService` 相关的地方。会发现，在程序的开头定义了这个私有变量 `private heroService: HeroService;` , 之后在 `onModuleInit()` 声明周期函数中为其进行赋值： `this.heroService = this.client.getService<HeroService>('HeroService');` 这行代码就有了一点超出常规，因为正常的写法都是在constructor构造函数中实现依赖注入的，这个确实在生命周期中通过赋值的方式来实现的，而且赋的值是从另一个属性， `this.client` 中通过 `getService` 方法来取出来的！视线转到client上，那这个东西又是什么呢？查看代码，发现了很熟悉的一行： `constructor(@Inject('HERO_PACKAGE') private readonly client: ClientGrpc) {}` ，这是经典的依赖注入写法！瞬间清晰了很多！那这个 `ClientGrpc` 又是那里来的呢？往上翻！看到 `hero.module.ts` 文件讲解的部分。至此，http转到grpc已经走通。
+从http请求的 `@Get(':id') getById(@Param('id') id: string)` 方法开始，代码中仅有一行： `return this.heroService.findOne({ id: +id });` ，该代码调用了 `this.heroService.findOne()` 方法，此方法为grpc方法（PS：此处可以看出grpc的特点，单看这行代码，和我们正常调用一个service的方法写法上完全一致，这就是grpc的出发点！）。该方法如何做的呢？为什么仅此一行就实现了rpc调用？接下来在这个文件中看所有与 `heroService` 相关的地方。会发现，在程序的开头定义了这个私有变量 `private heroService: HeroService;` , 之后在 `onModuleInit()` 生命周期函数中为其进行赋值： `this.heroService = this.client.getService<HeroService>('HeroService');` 这行代码就有了一点超出常规，因为正常的写法都是在constructor构造函数中实现依赖注入的，这个却是在生命周期中通过赋值的方式来实现的，而且赋的值是从另一个属性， `this.client` 中通过 `getService` 方法来取出来的！视线转到client上，那这个东西又是什么呢？查看代码，发现了很熟悉的一行： `constructor(@Inject('HERO_PACKAGE') private readonly client: ClientGrpc) {}` ，这是经典的依赖注入写法！瞬间清晰了很多！那这个 `ClientGrpc` 又是那里来的呢？往上翻！看到 `hero.module.ts` 文件讲解的部分。至此，http转到grpc已经走通。
 
 `注意：`  `this.client.getService<HeroService>('HeroService')` 中为什么函数参数中用字符串 `'HeroService'` 来作为参数呢？这个可不是随意写的，这个是grpc通过proto文件来生成的客户端里面的！看一下 `hero.proto` 文件就能看到 `service HeroService` 这个很明显代码，所以这个函数参数是在这里来的！不能乱写哦！
 
