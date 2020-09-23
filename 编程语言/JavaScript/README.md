@@ -1,6 +1,7 @@
 # JavaScript 篇
 
 - [基础语法篇](基础语法/README.md)
+  - [数组篇](基础语法/数组/README.md)
 
 - [ES2016+各版本新特性](ES2016+各版本新特性/README.md)
 
