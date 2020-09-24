@@ -8,7 +8,7 @@ kafka需要java环境，请先安装[openjdk](安装OpenJDK.md)
 
 ## Step2. 解压
 
-得到一下文件结构
+得到以下文件结构
 
 ``` shell
 $ tree -L 1
