@@ -5,3 +5,7 @@
 * [安装Emqx](安装Emqx.md)
 * [安装OpenJDK](安装OpenJDK.md)
 * [安装Kafka](安装Kafka.md)
+* [安装MongoDB](MongoDB/README.md)
+  + [单机版](MongoDB/单机版.md)
+  + [复制集](MongoDB/复制集.md)
+  + [分片集](MongoDB/分片集.md)
