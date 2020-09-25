@@ -6,6 +6,7 @@
   + [ACL权限设计](权限设计/ACL权限设计.md)
 
 * [认证设计](认证设计/README.md)
+  + [HttpBasic认证](认证设计/HttpBasic认证.md)
   + [Session](认证设计/Session.md)
   + [JWT](认证设计/JWT.md)
   + [JWT增强改造](认证设计/JWT增强改造.md)
