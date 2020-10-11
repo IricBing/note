@@ -64,6 +64,14 @@ $ newgrp docker
 $ docker run hello-world
 ```
 
+## 增加zsh自动补全命令功能
+
+``` shell
+$ gedit ~/.zshrc
+```
+
+插件列表增加插件 `docker` 即可
+
 ## 重启
 
 换源后需要重启才能生效，重启命令如下：

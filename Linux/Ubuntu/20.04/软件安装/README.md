@@ -9,3 +9,5 @@
   + [单机版](MongoDB/单机版.md)
   + [复制集](MongoDB/复制集.md)
   + [分片集](MongoDB/分片集.md)
+* [安装Postgresql](Postgresql/README.md)
+  + [单机版](Postgresql/单机版.md)

@@ -5,3 +5,4 @@
   + Windows10安装
 * [基本使用](基本使用/README.md)
 * [基础知识](基础知识/README.md)
+* [历史闲谈](历史闲谈/README.md)
