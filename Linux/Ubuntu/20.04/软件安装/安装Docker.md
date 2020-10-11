@@ -38,7 +38,31 @@ $ sudo vim /etc/docker/daemon.json
 
 ## 去掉sudo权限
 
-安装好的Docker需要用sudo权限来启动，这不是一个好的习惯，会造成安全风险（题外话，Docker里面的root权限）
+安装好的Docker需要用sudo权限来启动，这不是一个好的习惯，会造成安全风险（题外话，Docker里面的root权限和宿主机中的root权限是一样的，如果处理不好，容器可能控制宿主机，这也是容器安全需要考虑的一方面，如想深入了解，可以看一下[虚拟化技术](../../../../容器/Docker/基础知识/虚拟化技术.md)）
+
+### Step1. 创建docker用户组
+
+``` shell
+$ sudo groupadd docker
+```
+
+### Step2. 将当前用户增加到docker用户组中
+
+``` shell
+$ sudo usermod -aG docker $USER
+```
+
+### Step3. 注销并重新登录，以便重新评估组成员关系
+
+``` shell
+$ newgrp docker 
+```
+
+### Step4. 测试
+
+``` shell
+$ docker run hello-world
+```
 
 ## 重启
 
