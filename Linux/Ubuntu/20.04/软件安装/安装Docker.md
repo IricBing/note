@@ -85,5 +85,5 @@ $ sudo service docker restart
 默认Docker没有开机自启动功能的，需要我们手动给他添加到开机启动项中，如果不加，name每次开机后都要手动运行docker才行。
 
 ``` shell
-$ systemctl enable docker.service
+$ sudo systemctl enable docker.service
 ```
