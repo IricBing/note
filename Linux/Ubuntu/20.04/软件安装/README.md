@@ -3,6 +3,7 @@
 * [安装vim](安装vim.md)
 * [安装Git](安装Git.md)
 * [安装screen](安装screen.md)
+* [安装nvm](安装nvm.md)
 * [安装qq和微信](qq和微信.md)
 * [安装向日葵](安装向日葵.md)
 * [安装Emqx](安装Emqx.md)
