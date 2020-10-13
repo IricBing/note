@@ -49,11 +49,13 @@
 * [NodeJS](NodeJS/README.md)
 
   + [NPM](NodeJS/NPM/README.md)
+  + [版本控制](NodeJS/版本控制/README.md)
   + [NestJS](NodeJS/NestJS/README.md)
     - [基础篇](NodeJS/NestJS/基础篇/README.md)
     - [微服务篇](NodeJS/NestJS/微服务/README.md)
   + [Express](NodeJS/Express/README.md)
   + [Koa](NodeJS/Koa/README.md)
+  + [pm2](NodeJS/pm2/README.md)
 
 * [消息中间件](消息中间件/README.md)
 
