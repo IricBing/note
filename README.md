@@ -56,6 +56,7 @@
   + [Express](NodeJS/Express/README.md)
   + [Koa](NodeJS/Koa/README.md)
   + [pm2](NodeJS/pm2/README.md)
+  + [精简服务器](NodeJS/精简服务器/README.md)
 
 * [消息中间件](消息中间件/README.md)
 
