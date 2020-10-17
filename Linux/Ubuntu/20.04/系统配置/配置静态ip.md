@@ -1,17 +1,18 @@
 # Ubuntu 20.04 配置静态 IP
 
 ## 前言
-Ubuntu 从 `17.10` 开始，已放弃在 `/etc/network/interfaces` 里固定 IP 的配置，interfaces 文件不复存在，即使配置也不会生效，而是改成 `netplan` 方式 ，配置写在 `/etc/netplan/01-netcfg.yaml` 或者`类似名称的 yaml 文件`里。
+
+Ubuntu 从 `17.10` 开始，已放弃在 `/etc/network/interfaces` 里固定 IP 的配置，interfaces 文件不复存在，即使配置也不会生效，而是改成 `netplan` 方式 ，配置写在 `/etc/netplan/01-netcfg.yaml` 或者 `类似名称的 yaml 文件` 里。
 
 ## 查看网卡设备号
 
-```shell
+``` shell
 $ ip a
 ```
 
 ## 查看现有配置
 
-```shell
+``` shell
 $ cd /etc/netplan
 $ ls
 $ cat demo.yaml
@@ -34,6 +35,7 @@ network:
 ```
 
 ## 配置生效
-```shell
+
+``` shell
 $ sudo netplan apply
 ```
