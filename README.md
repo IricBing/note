@@ -54,6 +54,7 @@
   + [NestJS](NodeJS/NestJS/README.md)
     - [基础篇](NodeJS/NestJS/基础篇/README.md)
     - [微服务篇](NodeJS/NestJS/微服务/README.md)
+    - [插件篇](NodeJS/NestJS/插件篇/README.md)
   + [Express](NodeJS/Express/README.md)
   + [Koa](NodeJS/Koa/README.md)
   + [pm2](NodeJS/pm2/README.md)
