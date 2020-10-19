@@ -29,10 +29,10 @@ console.log(a); // 8
 基础用法
 
 ``` javascript
-[1, 2, 3].includes(1) // true
-    ![1, 2, 3].includes(4) // true
-    ![1, 2, 3].includes(1, 1) // true
-[NaN].includes(NaN) // true
+[1, 2, 3].includes(1); // true
+![1, 2, 3].includes(4); // true
+![1, 2, 3].includes(1, 1); // true
+[NaN].includes(NaN); // true
 Array(1).includes(); // true
 ```
 
@@ -71,8 +71,10 @@ console.log(passed) // 3
 ``` javascript
 [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array]
 .every(function(TypedArray) {
+    console.log(new TypedArray([1, 2, 3]))
     console.log(new TypedArray([1, 2, 3]).includes(1)) //true
     console.log(!new TypedArray([1, 2, 3]).includes(4)) //true
     console.log(!new TypedArray([1, 2, 3]).includes(1, 1)) //true
+    return true
 })
 ```
