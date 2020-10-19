@@ -15,7 +15,6 @@
 # 总纲
 
 * [编程语言](编程语言/README.md)
-
   + [JavaScript](编程语言/JavaScript/README.md)
     - [基础语法篇](编程语言/JavaScript/基础语法/README.md)
     - [ES2016+各版本新特性](编程语言/JavaScript/ES2016+各版本新特性/README.md)
@@ -29,7 +28,6 @@
   + [C](编程语言/C/README.md)
 
 * [程序设计](程序设计/README.md)
-
   + [数据结构](程序设计/数据结构/README.md)
   + [算法](程序设计/算法/README.md)
   + [设计模式](程序设计/设计模式/README.md)
@@ -37,21 +35,19 @@
   + [测试](程序设计/测试/README.md)
 
 * [数据库](数据库/README.md)
-
   + [SQL 基础](数据库/SQL/README.md)
   + [Docker 版数据库](数据库/Docker/README.md)
   + [PostgreSQL](数据库/PostgreSQL/README.md)
   + [MongoDB](数据库/MongoDB/README.md)
 
 * [Git](Git/README.md)
-
   + [基础用法](Git/基本使用/README.md)
   + [Gitlab](Git/Gitlab/README.md)
 
 * [NodeJS](NodeJS/README.md)
-
   + [NPM](NodeJS/NPM/README.md)
   + [版本控制](NodeJS/版本控制/README.md)
+    - [nvm](NodeJS/版本控制/nvm/README.md)
   + [NestJS](NodeJS/NestJS/README.md)
     - [基础篇](NodeJS/NestJS/基础篇/README.md)
     - [微服务篇](NodeJS/NestJS/微服务/README.md)
@@ -68,7 +64,6 @@
   + [Apache Bench （压测）](运维/ApacheBench/README.md)
 
 * [消息中间件](消息中间件/README.md)
-
   + [Emqx](消息中间件/Emqx/README.md)
   + [Kafka](消息中间件/Kafka/README.md)
 
@@ -79,14 +74,12 @@
   + [Kubernetes](容器/Kubernetes/README.md)
 
 * [硬件](硬件/README.md)
-
   + [基础概念](硬件/基础概念/README.md)
   + [合宙](硬件/合宙/README.md)
     - [Luat](硬件/合宙/Luat/README.md)
     - [SmartDTU (iRTU)](硬件/合宙/SmartDTU/README.md)
 
 * [Linux](Linux/README.md)
-
   + [Alpine](Linux/Alpine/README.md)
   + [Ubuntu](Linux/Ubuntu/README.md)
     - [18.04 特别篇](Linux/Ubuntu/18.04/README.md)
