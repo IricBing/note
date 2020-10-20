@@ -36,7 +36,7 @@ console.log(a); // 8
 Array(1).includes(); // true
 ```
 
-原型调用用法
+原型调用用法，该示例附[讲解](includes原型调用示例讲解.md)
 
 ``` javascript
 let passed = 0;
