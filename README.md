@@ -50,6 +50,7 @@
   + [版本控制](NodeJS/版本控制/README.md)
     - [nvm](NodeJS/版本控制/nvm/README.md)
   + [NestJS](NodeJS/NestJS/README.md)
+    - [工程配置](NodeJS/NestJS/工程配置/README.md)
     - [基础篇](NodeJS/NestJS/基础篇/README.md)
     - [微服务篇](NodeJS/NestJS/微服务/README.md)
     - [插件篇](NodeJS/NestJS/插件篇/README.md)

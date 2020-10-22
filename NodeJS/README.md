@@ -5,6 +5,7 @@
 * [版本控制](版本控制/README.md)
   + [nvm](版本控制/nvm/简介.md)
 * [NestJS](NestJS/README.md)
+  + [工程配置](NestJS/工程配置/README.md)
   + [基础篇](NestJS/基础篇/README.md)
   + [微服务](NestJS/微服务/README.md)
   + [插件篇](NestJS/插件篇/README.md)
