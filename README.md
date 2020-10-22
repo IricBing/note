@@ -22,6 +22,7 @@
     - [深入理解篇](编程语言/JavaScript/深入理解/README.md)
     - [算法与数据结构篇](编程语言/JavaScript/算法与数据结构/README.md)
   + [TypeScript](编程语言/TypeScript/README.md)
+    - [设计模式篇](编程语言/TypeScript/设计模式/README.md)
   + [Lua](编程语言/Lua/README.md)
   + [Python](编程语言/Python/README.md)
   + [Rust](编程语言/Rust/README.md)
