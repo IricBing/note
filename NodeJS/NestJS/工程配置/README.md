@@ -46,6 +46,25 @@
 }
 ```
 
+## tsconfig.build.json 文件
+
+示例：
+
+``` json
+{
+  "extends": "./tsconfig.json",
+  "include": [  //include 属性是用来避免在开发时更改静态资源（通常为public文件夹下的内容）而导致服务重启的情况，仅监听src文件下所有文件
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "test",
+    "dist",
+    "**/*spec.ts"
+  ]
+}
+```
+
 ## .prettierrc 文件
 
 示例：
