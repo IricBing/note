@@ -1,5 +1,26 @@
 # NestJS 工程配置篇
 
+需要安装的插件
+
+* Prettier - Code formatter
+* vscode-proto3
+
+## nest-cli.json 文件
+
+示例：
+
+``` json
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "assets": [
+      "**/*.proto"
+    ]
+  }
+}
+```
+
 ## tsconfig.json 文件
 
 示例：
