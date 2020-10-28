@@ -19,3 +19,4 @@
 * [安装qq和微信](qq和微信.md)
 * [安装向日葵](安装向日葵.md)
 * [安装Apache Bench(ab)](安装ab.md)
+* [安装wps](安装wps.md)
