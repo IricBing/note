@@ -49,6 +49,6 @@ grpc_node_binary_host_mirror "https://npm.taobao.org/mirrors/"
 
 ## 附件
 
-<a href="assets/files/.npmrc" target="_blank">.npmrc 文件</a>
+[.npmrc 文件](assets/files/.npmrc)
 
-<a href="assets/files/.yarnrc" target="_blank">.yarnrc 文件</a>
+[.yarnrc 文件](assets/files/.yarnrc)
