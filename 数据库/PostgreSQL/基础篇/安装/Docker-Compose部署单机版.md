@@ -12,6 +12,8 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: p5tgb6tfc%^
       POSTGRES_DB: iot
+      TZ: Asia/Shanghai
+      PGTZ: Asia/Shanghai
     ports:
 
       - '5432:5432'

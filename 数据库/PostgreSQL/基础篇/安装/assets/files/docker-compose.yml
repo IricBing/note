@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   postgres:
     image: postgres
@@ -7,8 +7,10 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: p5tgb6tfc%^
       POSTGRES_DB: iot
+      TZ: Asia/Shanghai
+      PGTZ: Asia/Shanghai
     ports:
-      - '5432:5432'
+      - "5432:5432"
     volumes:
       - $PWD/pg-data:/var/lib/postgresql/data
     container_name: postgresql
@@ -16,9 +18,9 @@ services:
   pgadmin:
     image: dpage/pgadmin4:latest
     restart: always
-    environment: 
+    environment:
       PGADMIN_DEFAULT_EMAIL: iricbing@gmail.com
-      PGADMIN_DEFAULT_PASSWORD: p5tgb6tfc%^ 
+      PGADMIN_DEFAULT_PASSWORD: p5tgb6tfc%^
     ports:
       - "5433:80"
     container_name: pgadmin

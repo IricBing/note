@@ -10,10 +10,10 @@ $ docker pull mongo
 
 ``` shell
 # 无需验证
-$ docker run -d -p 27017:27017 -v $PWD/mongo_docker_data:/data/db --name mongodb mongo
+$ docker run -d -p 27017:27017 -v $PWD/mongo_docker_data:/data/db -v /etc/localtime:/etc/localtime:ro --name mongodb mongo
 	
 # 需要验证
-$ docker run -d -p 27017:27017 -v $PWD/mongo_docker_data:/data/db --name mongodb mongo --auth
+$ docker run -d -p 27017:27017 -v $PWD/mongo_docker_data:/data/db -v /etc/localtime:/etc/localtime:ro --name mongodb mongo --auth
 ```
 
 ## Step3. 进入容器
