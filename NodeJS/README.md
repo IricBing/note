@@ -3,7 +3,7 @@
 * [NPM](NPM/README.md)
   + [开发篇](NPM/开发/README.md)
 * [版本控制](版本控制/README.md)
-  + [nvm](版本控制/nvm/简介.md)
+  + [nvm](版本控制/nvm/README.md)
 * [NestJS](NestJS/README.md)
   + [工程配置](NestJS/工程配置/README.md)
   + [基础篇](NestJS/基础篇/README.md)
