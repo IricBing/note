@@ -1,9 +1,14 @@
 # NestJS 工程配置篇
 
-需要安装的插件
+**需要安装的插件**
 
 * Prettier - Code formatter
 * vscode-proto3
+
+**node 版本**
+
+* v12.x
+* v14.x   //推荐
 
 ## nest-cli.json 文件
 
@@ -34,10 +39,13 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "lib": [        //当需要高级语法时，扩充此字段
-      "ES2020"
-    ],
-    "target": "es2019", //这里需要按照当前使用node的版本来选择打包版本
+    //node 12.x
+    // "lib": [        //当需要高级语法时，扩充此字段
+    //   "ES2020"
+    // ],
+    // "target": "es2019", //这里需要按照当前使用node的版本来选择打包版本
+    //node 14.x
+    "target": "es2020",
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
