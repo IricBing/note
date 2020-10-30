@@ -8,7 +8,7 @@
 **node 版本**
 
 * v12.x
-* v14.x   //推荐
+* v14.x   `推荐`
 
 ## nest-cli.json 文件
 
