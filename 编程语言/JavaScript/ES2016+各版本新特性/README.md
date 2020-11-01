@@ -11,6 +11,11 @@
 * [ES2016](ES2016/README.md)
 
 * [ES2017](ES2017/README.md)
+  + [Object static methods](ES2017/Object_Static_Methods.md)
+  + [String padding](ES2017/String_Padding.md)
+  + [函数语法中支持尾逗号](ES2017/Trailing_commas.md)
+  + [异步函数](ES2017/异步函数.md)
+  + [SharedArrayBuffer](ES2017/异步函数.md)
 
 * [ES2018](ES2018/README.md)
 
