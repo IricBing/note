@@ -122,3 +122,29 @@
   }
 }
 ```
+
+## 提交代码前自动格式化代码——可选
+
+安装 `husky` 和 `lint-staged` 包
+
+``` shell
+$ yarn add -D husky lint-staged
+```
+
+之后修改 `package.json` 文件，在最后面增加如下规则:
+
+``` json
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**": [
+      "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+      "git add"
+    ]
+  }
+}
+```
