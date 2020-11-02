@@ -125,6 +125,8 @@
 
 ## 提交代码前自动格式化代码——可选
 
+`注意：`  `monoRepo` 模式不可用，需要使用 `lerna` 来配置。
+
 安装 `husky` 和 `lint-staged` 包
 
 ``` shell
@@ -141,9 +143,8 @@ $ yarn add -D husky lint-staged
     }
   },
   "lint-staged": {
-    "src/**": [
-      "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-      "git add"
+    "src/**/*.ts": [
+      "prettier --write \"src/**/*.ts\" \"test/**/*.ts\""
     ]
   }
 }
