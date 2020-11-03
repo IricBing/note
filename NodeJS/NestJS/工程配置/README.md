@@ -4,6 +4,7 @@
 
 * Prettier - Code formatter
 * vscode-proto3
+* Clang-Format
 
 **node 版本**
 
@@ -119,7 +120,9 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "clang-format.executable": "/usr/bin/clang-format", //环境中需要安装 clang-format 软件
+  "clang-format.style": "google",
 }
 ```
 
