@@ -223,7 +223,10 @@ $ yarn add -D husky lint-staged
   },
   "lint-staged": {
     "src/**/*.ts": [
-      "prettier --write \"src/**/*.ts\" \"test/**/*.ts\""
+      "prettier --write \"src/**/*.ts\""
+    ],
+    "test/**/*.ts": [
+      "prettier --write \"test/**/*.ts\""
     ]
   }
 }
