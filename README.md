@@ -1,5 +1,7 @@
 # note
 
+**你的无畏来源于无知。弱小和无知，不是生存的障碍，傲慢才是。** ——《三体》
+
 个人笔记，仅供学习交流。
 
 [Github 地址](https://github.com/IricBing/note)
