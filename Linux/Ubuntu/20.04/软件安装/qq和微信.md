@@ -25,6 +25,8 @@ $ sudo apt install deepin.com.qq.im
 **用法**
 
 ``` shell
+$ curl -sL https://raw.githubusercontent.com/huan/docker-wechat/master/dochat.sh | bash
+or
 $ docker run \
     --name DoChat \
     --rm \
