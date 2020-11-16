@@ -20,6 +20,8 @@ $ sudo apt install docker.io
 
 不用说，换源必不可少。
 
+### 公开镜像源
+
 编辑 `/etc/docker/daemon.json` 文件，没有新建即可
 
 ``` shell
@@ -35,6 +37,12 @@ $ sudo vim /etc/docker/daemon.json
 ```
 
 保存，退出。
+
+### 个人镜像源(推荐，方便以后使用阿里云的容器镜像服务！)
+
+登录 `阿里云控制台` ，开通**容器镜像服务**
+
+![阿里云镜像加速器示例](assets/images/阿里云镜像加速器示例.png)
 
 ## 去掉sudo权限
 
