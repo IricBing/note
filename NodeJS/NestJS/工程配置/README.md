@@ -242,7 +242,9 @@ module.exports = {
 }
 ```
 
-## 提交代码前自动格式化代码——可选
+# 可选配置
+
+## 提交代码前自动格式化代码
 
 `注意：`  `monoRepo` 模式不可用，需要使用 `lerna` 来配置。
 
@@ -271,3 +273,61 @@ $ yarn add -D husky lint-staged
   }
 }
 ```
+
+## 生产环境打包优化
+
+## 新建 tsconfig.build.prod.json 文件
+
+这是一个新建的文件，主要是为了生产环境构建的时候移除无用信息配置的，这里面还想加入混淆压缩等功能，使用ts官网上的 `gulp+uglify` 搞了半天没成功。。。
+
+``` json
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": false,
+    "sourceMap": false,
+    "incremental": false
+  },
+  "exclude": [
+    "node_modules",
+    "test",
+    "dist",
+    "**/*spec.ts"
+  ]
+}
+```
+
+修改 `package.json` 文件，添加如下命令：
+
+``` json
+{
+  "scripts": {
+    "build:prod": "rimraf dist && nest build -p tsconfig.build.prod.json",
+  }
+}
+```
+
+以后生产环境构建使用如下命令：
+
+``` shell
+$ yarn build:prod
+```
+
+## Docker支持
+
+### 新建 .dockerignore 文件
+
+内容如下：
+
+``` gitignore
+**/*
+!package.json
+!.yarnrc
+!yarn.lock
+
+!./dist/
+```
+
+### 新建 Dockerfile 文件
+
+配置信息依环境而定，再次不做示例！
