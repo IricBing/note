@@ -4,7 +4,10 @@
 * [换源](换源.md)
   + [Registry Config (.npmrc and .yarnrc)](registry_config.md)
 * [yarn vs npm](yarn_vs_npm.md)
-* [npx](npx.md)
+
+* npm
+  + [npx](npx.md)
+  + [npm ci 命令](npm_ci.md)
 
 * [开发篇](开发/README.md)
   + [添加其他贡献者](开发/添加其他贡献者.md)
