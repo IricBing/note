@@ -5,5 +5,7 @@
 
 * [tag相关](tag/README.md)
 
+* [diff指令](diff/README.md)
+
 * ignore规则
   + [忽略office临时文件](ignore规则/忽略office临时文件.md)
