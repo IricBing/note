@@ -14,6 +14,10 @@
 * [PostgreSQL](PostgreSQL/README.md)
   + [基础篇](PostgreSQL/基础篇/README.md)
     - [基本操作](PostgreSQL/基础篇/基本操作/README.md)
+    - [数据类型](PostgreSQL/基础篇/数据类型/README.md)
+    - [运算符](PostgreSQL/基础篇/运算符/README.md)
+  + [psql](PostgreSQL/psql/README.md)
+  + [版本新特性](PostgreSQL/版本新特性/README.md)
 
 * [Redis](Redis/README.md)
 
