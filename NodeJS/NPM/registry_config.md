@@ -24,6 +24,7 @@ operadriver_cdnurl="http://npm.taobao.org/mirrors/operadriver/"
 
 #后台相关
 grpc_node_binary_host_mirror="https://npm.taobao.org/mirrors/"
+node_sqlite3_binary_host_mirror="http://npm.taobao.org/mirrors/"
 ```
 
 ## .yarnrc 文件完整版配置
@@ -45,6 +46,7 @@ operadriver_cdnurl "http://npm.taobao.org/mirrors/operadriver/"
 
 #后台相关
 grpc_node_binary_host_mirror "https://npm.taobao.org/mirrors/"
+node_sqlite3_binary_host_mirror "http://npm.taobao.org/mirrors/"
 ```
 
 ## 附件
