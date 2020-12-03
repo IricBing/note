@@ -21,3 +21,4 @@
 * [安装Apache Bench(ab)](安装ab.md)
 * [安装wps](安装wps.md)
 * [安装lrzsz](安装lrzsz.md)
+* [安装Nmap](安装Nmap.md)
