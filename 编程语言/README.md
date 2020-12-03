@@ -6,6 +6,7 @@
   + [设计模式篇](JavaScript/设计模式/README.md)
   + [深入理解篇](JavaScript/深入理解/README.md)
   + [算法与数据结构篇](JavaScript/算法与数据结构/README.md)
+  + [rxjs](JavaScript/rxjs/README.md)
 
 * [TypeScript](TypeScript/README.md)
 
