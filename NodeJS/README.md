@@ -1,6 +1,8 @@
 # NodeJS 篇
 
 * [NPM](NPM/README.md)
+  + [换源](NPM/换源.md)
+  + [代理](NPM/代理.md)
   + [开发篇](NPM/开发/README.md)
 * [版本控制](版本控制/README.md)
   + [nvm](版本控制/nvm/README.md)

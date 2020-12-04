@@ -51,6 +51,9 @@
 
 * [NodeJS](NodeJS/README.md)
   + [NPM](NodeJS/NPM/README.md)
+    - [换源](NodeJS/NPM/换源.md)
+    - [代理](NodeJS/NPM/代理.md)
+    - [开发篇](NodeJS/NPM/开发/README.md)
   + [版本控制](NodeJS/版本控制/README.md)
     - [nvm](NodeJS/版本控制/nvm/README.md)
   + [NestJS](NodeJS/NestJS/README.md)
