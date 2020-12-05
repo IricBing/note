@@ -24,3 +24,5 @@
 * [安装wps](安装wps.md)
 * [安装lrzsz](安装lrzsz.md)
 * [安装Nmap](安装Nmap.md)
+* [安装fma-config-tool](安装fma-config-tool.md)
+* [安装深度截屏](安装深度截屏.md)
