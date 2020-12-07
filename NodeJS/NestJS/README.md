@@ -6,6 +6,7 @@
   + [构建Docker镜像](容器镜像篇/构建Docker镜像.md)
 
 * [基础篇](基础篇/README.md)
+  + [依赖注入](依赖注入.md)
   + [动态模块](基础篇/动态模块.md)
 
 * [微服务篇](微服务/README.md)
@@ -21,3 +22,4 @@
 
 * [官方案例讲解](官方案例讲解/README.md)
   + [12 graphql schema first](官方案例讲解/graphql-schema-first.md)
+  + [25 dynamic modules(动态模块)](官方案例讲解/dynamic-modules.md)

@@ -38,6 +38,7 @@
   + [算法](程序设计/算法/README.md)
   + [设计模式](程序设计/设计模式/README.md)
   + [系统架构设计](程序设计/系统架构设计/README.md)
+  + [架构思想](程序设计/架构思想/README.md)
   + [测试](程序设计/测试/README.md)
 
 * [数据库](数据库/README.md)
@@ -101,6 +102,7 @@
   + [ElementUI](Web/ElementUI/README.md)
   + [VantUI](Web/VantUI/README.md)
   + [Fabric.js](Web/Fabricjs/README.md)
+  + [Svelte](Web/Svelte/README.md)
   + [Angular](Web/Angular/README.md)
   + [Ionic](Web/Ionic/README.md)
   + [React](Web/React/README.md)
