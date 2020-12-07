@@ -9,6 +9,8 @@
   + [rxjs](JavaScript/rxjs/README.md)
 
 * [TypeScript](TypeScript/README.md)
+  + [基础篇](TypeScript/基础篇/README.md)
+  + [设计模式篇](TypeScript/设计模式/README.md)
 
 * [Lua](Lua/README.md)
 

@@ -23,3 +23,7 @@
 * [官方案例讲解](官方案例讲解/README.md)
   + [12 graphql schema first](官方案例讲解/graphql-schema-first.md)
   + [25 dynamic modules(动态模块)](官方案例讲解/dynamic-modules.md)
+
+* [原理探究](原理探究/README.md)
+  + [依赖注入](原理探究/依赖注入/README.md)
+  + [AOP(切面编程)](原理探究/AOP/README.md)
