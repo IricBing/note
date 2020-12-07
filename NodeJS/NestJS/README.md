@@ -18,3 +18,6 @@
 
 * [程序设计](程序设计/README.md)
   + [配置模块设计](程序设计/配置模块设计/README.md)
+
+* [官方案例讲解](官方案例讲解/README.md)
+  + [12 graphql schema first](官方案例讲解/graphql-schema-first.md)

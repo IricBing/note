@@ -2,6 +2,8 @@
 
 **你的无畏来源于无知。弱小和无知，不是生存的障碍，傲慢才是。** ——《三体》
 
+**纸上得来终觉浅，绝知此事要躬行。**
+
 个人笔记，仅供学习交流。
 
 [Github 地址](https://github.com/IricBing/note)
@@ -83,6 +85,7 @@
     - [插件篇](NodeJS/NestJS/插件篇/README.md)
     - [程序设计](NodeJS/NestJS/程序设计/README.md)
     - [容器镜像篇](NodeJS/NestJS/容器镜像篇/README.md)
+    - [官方案例讲解](NodeJS/NestJS/官方案例讲解/README.md)
   + [Express](NodeJS/Express/README.md)
   + [Koa](NodeJS/Koa/README.md)
   + [pm2](NodeJS/pm2/README.md)

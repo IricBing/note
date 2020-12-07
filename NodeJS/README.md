@@ -13,6 +13,7 @@
   + [微服务](NestJS/微服务/README.md)
   + [插件篇](NestJS/插件篇/README.md)
   + [程序设计](NestJS/程序设计/README.md)
+  + [官方案例讲解](NestJS/官方案例讲解/README.md)
 * [Express](Express/README.md)
 * [Koa](Koa/README.md)
 * [pm2](pm2/README.md)
