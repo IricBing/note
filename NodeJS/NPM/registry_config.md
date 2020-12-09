@@ -22,6 +22,7 @@ profiler_binary_host_mirror="https://npm.taobao.org/mirrors/node-inspector/"
 chromedriver_cdnurl="http://npm.taobao.org/mirrors/chromedriver/"
 operadriver_cdnurl="http://npm.taobao.org/mirrors/operadriver/"
 electron_mirror="https://npm.taobao.org/mirrors/electron/"
+electron_builder_binaries_mirror="http://npm.taobao.org/mirrors/electron-builder-binaries/"
 
 #后台相关
 grpc_node_binary_host_mirror="https://npm.taobao.org/mirrors/"
@@ -45,6 +46,7 @@ profiler_binary_host_mirror "https://npm.taobao.org/mirrors/node-inspector/"
 chromedriver_cdnurl "http://npm.taobao.org/mirrors/chromedriver/"
 operadriver_cdnurl "http://npm.taobao.org/mirrors/operadriver/"
 electron_mirror "https://npm.taobao.org/mirrors/electron/"
+electron_builder_binaries_mirror "http://npm.taobao.org/mirrors/electron-builder-binaries/"
 
 #后台相关
 grpc_node_binary_host_mirror "https://npm.taobao.org/mirrors/"

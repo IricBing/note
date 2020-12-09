@@ -4,3 +4,4 @@
 
 * [工程配置](工程配置/README.md)
   + [CDN配置](工程配置/CDN配置.md)
+  + [vscode项目配置](工程配置/vscode项目配置.md)
