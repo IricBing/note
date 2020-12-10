@@ -361,7 +361,7 @@ module.exports = {
   "semi": true,
   "tabWidth": 2,
   "useTabs": false,
-  "printWidth": 120,
+  "printWidth": 180,
   "endOfLine": "auto",
   "trailingComma": "none",
   "bracketSpacing": true,
@@ -397,7 +397,7 @@ $ yarn add -D husky lint-staged cross-env
     }
   },
   "lint-staged": {
-    "src/**": [
+    "src/**/*{.js,.vue}": [
       "cross-env NODE_ENV=production vue-cli-service lint"
     ]
   }
