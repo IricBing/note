@@ -22,9 +22,9 @@
 
 最好是能够建立通用的配置设置，既可以通过配置文件，又可以兼容容器的 `environment` 配置。
 
-对于配置文件方式，nestjs官方已经提供了这个功能，[官方文档](https://docs.nestjs.com/techniques/configuration)，熟读文档就能发现可以通过 `.env` 文件或者 `yaml` 格式文件来写入配置，我们选取 `.env` 文件作为配置文件，因为 `yaml` 格式文件需要增加额外的包。
+对于配置文件方式， `nestjs` 官方已经提供了这个功能，[官方文档](https://docs.nestjs.com/techniques/configuration)，熟读文档就能发现可以通过 `.env` 文件或者 `yaml` 格式文件来写入配置，我们选取 `.env` 文件作为配置文件，因为 `yaml` 格式文件需要增加额外的包。
 
-对于配置文件校验功能，官方文档是通过 `@hai/joi` 这个包来实现的，但是npm上这个包已经搜索不到了，推荐使用使用[joi](https://www.npmjs.com/package/joi)这个包。具体使用会在示例项目中介绍。
+对于配置文件校验功能，官方文档是通过 `@hai/joi` 这个包来实现的，但是 `npm` 上这个包已经搜索不到了，推荐使用使用[joi](https://www.npmjs.com/package/joi)这个包。具体使用会在示例项目中介绍。
 
 接下来是兼容容器的 `environment` 配置，根据文档，这个里面写的配置会挂到 `process.env` 中，而 `@nestjs/config` 包将配置文件的内容也是挂载到 `process.env` 中，下面就是搞懂配置优先级了，经过查询探究，发现配置优先级如下：(从左到右，优先级逐渐降低)
 
