@@ -8,6 +8,26 @@
   "editor.tabSize": 2, // 重新设定tabsize
   "editor.formatOnSave": true, // #每次保存的时候自动格式化
   "window.zoomLevel": 0,
+  // 在使用搜索功能时，将这些文件夹/文件排除在外
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/target": true,
+    "**/logs": true,
+    "**/dist": true
+  },
+  // 这些文件将不会显示在工作空间中
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/*.js": {
+      "when": "$(basename).ts" //ts编译后生成的js文件将不会显示在工作空中
+    },
+    "**/node_modules": true
+  },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "vetur.validation.template": false, // 使用eslint插件时需要把此项设置为false
   "vetur.validation.script": true, //检查js代码
