@@ -73,6 +73,26 @@ app.on('ready', async () => {
 })
 ```
 
+## Step5. 项目配置
+
+`Electron` 现在默认在**渲染进程**中不允许调用 `node` 中的接口与服务，一般需要打开这个限制，还有一些需要 `rebuild` 的包需要单独声明（这里以 `serialport` 为例）
+
+修改vue.config.js文件
+
+``` javascript
+module.exports = {
+    publicPath: './',
+    productionSourceMap: false,
+    pluginOptions: {
+        electronBuilder: {
+            nodeIntegration: true, //允许渲染进程调用node接口与服务
+            externals: ['serialport'] // 声明需要rebuild的扩展包
+        }
+    },
+    ……
+}
+```
+
 ## 打包
 
 在各自的目标平台下运行：
