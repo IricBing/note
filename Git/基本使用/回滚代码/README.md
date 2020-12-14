@@ -23,23 +23,56 @@ $ git reset --hard HEAD^^   # 回到上上个版本
 
 ### reset 对提交记录的影响
 
-使用reset来回退版本在效果上就像是删除了一些提交。
+使用 `reset` 来回退版本在效果上就像是删除了一些提交。
 
-例如，在master分支上有如下提交：
+例如，在 `master` 分支上有如下提交：
 
-``` mermaid
-gitGraph:
-options
-{
-    "nodeSpacing": 150,
-    "nodeRadius": 10
-}
-end
-commit
-branch master
-checkout master
-commit
-commit
-commit
-commit
+``` 
+
+42eae13 (HEAD -> master) 第四次修改
+97ea0f9 第三次修改
+e50b7c2 第二次修改
+3a52650 第一次修改
 ```
+
+如果发现，在第四次修改有错误，使用 `reset` 命令回滚到第三次修改，这个时候提交历史变成了：
+
+``` 
+
+97ea0f9 (HEAD -> master) 第三次修改
+e50b7c2 第二次修改
+3a52650 第一次修改
+```
+
+相当于我们删除了第四次修改的提交记录，（这里并不是物理删除，还是可以找回来的，具体命令可以查看[git reflog](../reflog/README.md)）
+
+## revert 基本使用
+
+假设在master分支上有如下提交：
+
+``` 
+
+42eae13 (HEAD -> master) 第四次修改
+97ea0f9 第三次修改
+e50b7c2 第二次修改
+3a52650 第一次修改
+```
+
+第四次提交有一些问题，但是还有其他代码是不可放弃的，我们就需要用 `revert` 指令来保留第四次代码，同时恢复第三次修改。
+
+``` shell
+$ git revert -n 97ea0f9
+$ git commit -m "恢复第三次修改"
+```
+
+此时的提交历史会变成：
+
+``` shell
+33b8b30 (HEAD -> master) Revert "恢复第三次修改"
+42eae13 第四次修改
+97ea0f9 第三次修改
+e50b7c2 第二次修改
+3a52650 第一次修改
+```
+
+实际上， `Git` 把第三次修改从提交中剔除(还原)了，还保留了第四次修改，并且产生了新的 `commit_id` 。

@@ -4,7 +4,7 @@
   + [同一项目使用多个仓库](远端/同一项目使用多个仓库.md)
 
 * [tag相关](tag/README.md)
-
+* [reflog指令](reflog/README.md)
 * [diff指令](diff/README.md)
 * [回滚代码](回滚代码/README.md)
 
