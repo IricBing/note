@@ -26,3 +26,4 @@
 * [安装Nmap](安装Nmap.md)
 * [安装fma-config-tool](安装fma-config-tool.md)
 * [安装深度截屏](安装深度截屏.md)
+* [安装flameshot截屏](安装flameshot.md)
