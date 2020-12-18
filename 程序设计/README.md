@@ -11,7 +11,7 @@
   + [认证设计](系统架构设计/认证设计/README.md)
 
 * [架构思想](架构思想/README.md)
-  + [IoC(控制反转)](架构思想/IoC/README.md)
+  + [IoC(控制反转)](架构思想/Ioc/README.md)
   + [DI(依赖注入)](架构思想/DI/README.md)
     - [手写实现](架构思想/DI/手写实现.md)
 
