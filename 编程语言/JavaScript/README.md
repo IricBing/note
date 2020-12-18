@@ -2,6 +2,9 @@
 
 * [基础语法篇](基础语法/README.md)
   + [数组篇](基础语法/数组/README.md)
+  + [新增数据结构](基础语法/新增数据结构/README.md)
+    - [Set和WeakSet](基础语法/新增数据结构/Set.md)
+    - [Map和WeakMap](基础语法/新增数据结构/Map.md)
 
 * [ES2016+各版本新特性](ES2016+各版本新特性/README.md)
 
