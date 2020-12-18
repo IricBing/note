@@ -255,8 +255,8 @@ export type Provider<T> = ClassProvider<T> | ValueProvider<T> | FactoryProvider<
 3. 源码对于`ClassProvider`和`FactoryProvider`类型支持`scope`
 4. 源码对于`FactoryProvider`类型支持注入
 
-按照经验来讲，源码支持 `Type<T>` 类型是给@Module()修饰符中的provide属性使用的，这样写起来更清爽，简洁，后续讲解。而 `FactoryProvider` 类型支持注入是为了实现[动态模块](../../基础篇/动态模块.md)功能的。而 `ExistingProvider` 类型显而易见，是为了使用已经存在的依赖，避免重复创建而实现的。
+按照经验来讲，源码支持 `Type<T>` 类型是给 `@Module()` 修饰符中的 `provide` 属性使用的，这样写起来更清爽，简洁，后续讲解。而 `FactoryProvider` 类型支持注入是为了实现[动态模块](../../基础篇/动态模块.md)功能的。而 `ExistingProvider` 类型显而易见，是为了使用已经存在的依赖，避免重复创建而实现的。
 
 ## IoC 容器
 
-控制反转的容器是整个思想的精华所在，同时，设计实现的优良主要看这里，尽管手工实现的demo非常的简陋，但是这部分代码也写了120多行。nestjs的源码更加的复杂，而且nestjs并不像demo那样手动注入，而是通过@Module()装饰器来自动注入，这里面的代码量更加庞大，笔记的讲解会占用大部分篇幅。由于这篇笔记的篇幅已经很长了，另起一篇来写：[NestJS依赖注入-续](续.md)
+控制反转的**容器**是整个思想的**精华**所在，同时，设计实现的优良主要看这里，尽管手工实现的demo非常的简陋，但是这部分代码也写了120多行。 `nestjs` 的源码更加的复杂，而且 `nestjs` 并不像demo那样手动注入，而是通过 `@Module()` 装饰器来**自动注入**，这里面的代码量更加庞大，笔记的讲解会占用大部分篇幅。由于这篇笔记的篇幅已经很长了，另起一篇来写：[NestJS依赖注入-续](续.md)
