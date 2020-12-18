@@ -214,3 +214,49 @@ export interface ExistingProvider<T = any> {
   useExisting: any;
 }
 ```
+
+对比手工实现的代码：
+
+``` typescript
+import { Type } from "./type";
+
+export class InjectionToken {
+  constructor(public injectionIdentifier: string) { }
+}
+
+export type Token<T> = Type<T> | InjectionToken;
+
+export type Factory<T> = () => T;
+
+export interface BaseProvider<T> {
+  provide: Token<T>;
+}
+
+export interface ClassProvider<T> extends BaseProvider<T> {
+  provide: Token<T>;
+  useClass: Type<T>;
+}
+export interface ValueProvider<T> extends BaseProvider<T> {
+  provide: Token<T>;
+  useValue: T;
+}
+export interface FactoryProvider<T> extends BaseProvider<T> {
+  provide: Token<T>;
+  useFactory: Factory<T>;
+}
+
+export type Provider<T> = ClassProvider<T> | ValueProvider<T> | FactoryProvider<T>;
+```
+
+可以发现，差别不是很大，主要有四点差别：
+
+1. 源码支持`Type<T>`类型
+2. 源码多了`ExistingProvider`类型
+3. 源码对于`ClassProvider`和`FactoryProvider`类型支持`scope`
+4. 源码对于`FactoryProvider`类型支持注入
+
+按照经验来讲，源码支持 `Type<T>` 类型是给@Module()修饰符中的provide属性使用的，这样写起来更清爽，简洁，后续讲解。而 `FactoryProvider` 类型支持注入是为了实现[动态模块](../../基础篇/动态模块.md)功能的。而 `ExistingProvider` 类型显而易见，是为了使用已经存在的依赖，避免重复创建而实现的。
+
+## IoC 容器
+
+控制反转的容器是整个思想的精华所在，同时，设计实现的优良主要看这里，尽管手工实现的demo非常的简陋，但是这部分代码也写了120多行。nestjs的源码更加的复杂，而且nestjs并不像demo那样手动注入，而是通过@Module()装饰器来自动注入，这里面的代码量更加庞大，笔记的讲解会占用大部分篇幅。由于这篇笔记的篇幅已经很长了，另起一篇来写：[NestJS依赖注入-续](续.md)
