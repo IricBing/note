@@ -12,7 +12,7 @@
 
 同步更新，贴出两个地址的原因是：两个网站的 Markdown 支持不一致，**GitHub 不支持流程图，Gitlab 不支持 webp 格式图片**，如遇显示问题，可切换地址查看！
 
-流程图相关请使用 vscode 查看，安装[Markdown Preview Mermaid Support](https://github.com/mjbvz/vscode-markdown-mermaid)插件，[mermaid 流程图语法](https://www.cnblogs.com/q735613050/p/9368331.html)
+流程图相关请使用 `vscode` 查看，安装[Markdown Preview Mermaid Support](https://github.com/mjbvz/vscode-markdown-mermaid)插件，[mermaid 流程图语法](https://www.cnblogs.com/q735613050/p/9368331.html)
 
 最兼容的查看方式：**下载到本地，通过 vscode 查看！**
 
@@ -31,6 +31,8 @@
     - [设计模式篇](编程语言/TypeScript/设计模式/README.md)
   + [Lua](编程语言/Lua/README.md)
   + [Python](编程语言/Python/README.md)
+    - [基础篇](编程语言/Python/基础篇/README.md)
+    - [生态篇](编程语言/Python/生态篇/README.md)
   + [Rust](编程语言/Rust/README.md)
   + [C](编程语言/C/README.md)
 

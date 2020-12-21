@@ -14,6 +14,7 @@
   + [IoC(控制反转)](架构思想/Ioc/README.md)
   + [DI(依赖注入)](架构思想/DI/README.md)
     - [手写实现](架构思想/DI/手写实现.md)
+  + [MVVM](架构思想/MVVM/README.md)
 
 * [测试](测试/README.md)
   + [测试种类](测试/种类.md)

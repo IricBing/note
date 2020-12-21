@@ -10,3 +10,4 @@
 
 * ignore规则
   + [忽略office临时文件](ignore规则/忽略office临时文件.md)
+  + [python项目配置](ignore规则/python项目配置.md)

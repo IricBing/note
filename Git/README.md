@@ -7,5 +7,6 @@
   + [回滚代码](基本使用/回滚代码/README.md)
   + ignore规则
     - [忽略office临时文件](基本使用/ignore规则/忽略office临时文件.md)
+    - [python项目配置](基本使用/ignore规则/python项目配置.md)
 
 * [Gitlab](Gitlab/README.md)
