@@ -9,6 +9,7 @@ $ SELECT MD5('123qwe'), MD5(NULL);
 ```
 
 执行结果：
+
 |md5(text)|md5(text)|
 |-----|-----|
 |46f94c8de14fb36680850768ff1b7f2a | [null]|
