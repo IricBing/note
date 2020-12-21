@@ -53,6 +53,7 @@
       - [数据类型](数据库/PostgreSQL/基础篇/数据类型/README.md)
       - [运算符](数据库/PostgreSQL/基础篇/运算符/README.md)
       - [函数](数据库/PostgreSQL/基础篇/函数/README.md)
+      - [增删改](数据库/PostgreSQL/基础篇/增删改/README.md)
     - [psql](数据库/PostgreSQL/psql/README.md)
     - [版本新特性](数据库/PostgreSQL/版本新特性/README.md)
   + [MongoDB](数据库/MongoDB/README.md)

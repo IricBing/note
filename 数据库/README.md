@@ -22,6 +22,7 @@
     - [数据类型](PostgreSQL/基础篇/数据类型/README.md)
     - [运算符](PostgreSQL/基础篇/运算符/README.md)
     - [函数](PostgreSQL/基础篇/函数/README.md)
+    - [增删改](PostgreSQL/基础篇/增删改/README.md)
   + [psql](PostgreSQL/psql/README.md)
   + [版本新特性](PostgreSQL/版本新特性/README.md)
 
