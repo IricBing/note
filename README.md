@@ -147,6 +147,8 @@
     - [基本使用](Linux/Ubuntu/基本使用/README.md)
     - [基础知识](Linux/Ubuntu/基础知识/README.md)
     - [bug 修复](Linux/Ubuntu/bug修复/README.md)
+  + [云服务器](Linux/云服务器/README.md)
+  + [vmware ESXi 系统](Linux/vmwareESXi/README.md)
 
 * [矛与盾（安全攻防）](矛与盾/README.md)
   + [矛（攻击篇）](矛与盾/矛/README.md)
