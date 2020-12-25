@@ -5,4 +5,5 @@
 * [右键扩展vscode打开](右键扩展vscode打开.md)
 * [配置zsh](配置zsh.md)
 * [配置静态ip](配置静态ip.md)
+* [多网卡路由规则配置](多网卡路由规则配置.md)
 * [安装Fira Code字体](安装FiraCode字体.md)
