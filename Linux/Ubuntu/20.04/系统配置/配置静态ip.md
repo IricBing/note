@@ -24,9 +24,11 @@ $ cat demo.yaml
 network:
   ethernets:
     ens160:     #配置的网卡的名称
-      addresses: [192.168.0.105/24]    #配置的静态ip地址和掩码
+      addresses: 
+
+        - 192.168.0.105/24    #配置的静态ip地址和掩码
+
       dhcp4: no    #关闭DHCP，如果需要打开DHCP则写yes
-      optional: true
       gateway4: 192.168.0.1    #网关地址
       nameservers:
          addresses: [114.114.114.114,180.76.76.76]    #DNS服务器地址，多个DNS服务器地址需要用英文逗号分隔开
