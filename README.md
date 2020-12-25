@@ -128,6 +128,10 @@
   + [Docker](容器/Docker/README.md)
     - [基础知识](容器/Docker/基础知识/README.md)
     - [基本使用](容器/Docker/基本使用/README.md)
+    - [历史闲谈](容器/Docker/历史闲谈/README.md)
+    - [Docker Compose](容器/Docker/Compose/README.md)
+    - [Docker Swarm](容器/Docker/Swarm/README.md)
+    - [阿里云容器镜像服务](容器/Docker/阿里云容器镜像服务/README.md)
   + [Kubernetes](容器/Kubernetes/README.md)
     - [基础篇](容器/Kubernetes/基础篇/README.md)
 
