@@ -18,5 +18,5 @@ $ docker stack deploy -c [compose-file] --with-registry-auth kunda [stack 名称
 示例：
 
 ``` shell
-$ docker stack deploy -c docker-stack.yml --with-registry-auth kund
+$ docker stack deploy -c docker-stack.yml --with-registry-auth kunda
 ```
