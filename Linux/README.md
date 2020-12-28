@@ -3,6 +3,7 @@
 * [基础篇](基础篇/README.md)
   + [文件系统](基础篇/文件系统/README.md)
     - [文件格式](基础篇/文件系统/文件格式/README.md)
+    - [NFS文件系统](基础篇/文件系统/nfs/README.md)
 
 * [Alpine](Alpine/README.md)
   + [容器篇](Alpine/容器篇/README.md)
