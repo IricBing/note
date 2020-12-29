@@ -22,3 +22,5 @@
   + [wget命令](基础命令/wget命令.md)
   + [tree命令](基础命令/tree命令.md)
   + [screen命令](基础命令/screen命令.md)
+  + [showmount命令](基础命令/showmount命令.md)
+  + [exportfs命令](基础命令/exportfs命令.md)
