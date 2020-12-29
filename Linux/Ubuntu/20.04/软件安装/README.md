@@ -27,3 +27,5 @@
 * [安装fma-config-tool](安装fma-config-tool.md)
 * [安装深度截屏](安装深度截屏.md)
 * [安装flameshot截屏](安装flameshot.md)
+* [安装Python](安装Python.md)
+* [安装pip](安装pip.md)
