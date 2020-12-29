@@ -41,7 +41,7 @@ Directory Host(Options ...) Host(Options) #comment
 ``` conf
 /var/nfs/gernel  192.168.56.0/24(rw,insecure,sync,no_subtree_check)
 /var/nfs/public  *(ro,insecure,sync,no_subtree_check)
-/home/starky 192.168.56.1(rw,insecure,no_root_squash,sync,no_subtree_check)
+/home/starky 192.168.56.1(rw,insecure,no_root_squash,sync,no_wdelay,no_subtree_check)
 ```
 
 配置解释：
@@ -54,7 +54,9 @@ Directory Host(Options ...) Host(Options) #comment
 
 * `insecure` 选项：允许通过**任意端口**的远程访问
 
-* `sync` 选项：**强制** `NFS` 服务器在响应请求之前将文件的改动写入磁盘（强调客户端和服务端文件内容的**一致性**，但会**降低文件操作的效率**）。
+* `sync` 选项：**强制** `NFS` 服务器在响应请求之前将文件的改动写入磁盘（强调客户端和服务端文件内容的**一致性**，但会**降低文件操作的效率**）
+
+* `no_wdelay`： 若有写操作则**立即执行**，应与`sync`配合使用
 
 * `no_subtree_check` 选项：禁用 `subtree_check` 。`subtree_check` 用来设置服务器在收到请求时，检查该文件是否在指定目录结构中依旧可用（该选项会在某些情况下发生错误：重命名某文件的同时，该文件在客户端打开）。
 
