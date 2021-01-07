@@ -4,6 +4,10 @@
   + [HTML](基础/HTML/README.md)
   + [CSS](基础/CSS/README.md)
 
+* [常用库](常用库/README.md)
+  + [KaTeX](常用库/KaTeX/README.md)
+  + [Lodash](常用库/Lodash/README.md)
+
 * [Vue](Vue/README.md)
   + [2.x](Vue/2.x/README.md)
   + [3.x](Vue/3.x/README.md)
