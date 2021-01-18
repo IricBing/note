@@ -18,6 +18,7 @@
 
 * 基础命令
   + [apt](基础命令/apt.md)
+  + [tar](基础命令/tar命令.md)
   + [curl命令](基础命令/curl命令.md)
   + [wget命令](基础命令/wget命令.md)
   + [tree命令](基础命令/tree命令.md)
