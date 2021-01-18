@@ -96,7 +96,9 @@ const builder = (app, baseUrl, children) => {
                     navigationBarTitleText: route.title
                 }
             };
-            Object.keys(route).forEach(prop => !['path', 'name', 'title'].includes(prop) && (item[prop] = route[prop]));
+            Object.keys(route).forEach(
+                prop => !['path', 'name', 'title'].includes(prop) && (item[prop] = Object.assign(item[prop] || {}, route[prop]))
+            );
             routeList.push(item);
         }
     }
