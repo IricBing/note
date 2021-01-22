@@ -50,6 +50,7 @@
   + [PostgreSQL](数据库/PostgreSQL/README.md)
     - [基础篇](数据库/PostgreSQL/基础篇/README.md)
     - [应用篇](数据库/PostgreSQL/应用篇/README.md)
+    - [运维篇](数据库/PostgreSQL/运维篇/README.md)
     - [psql](数据库/PostgreSQL/psql/README.md)
     - [版本新特性](数据库/PostgreSQL/版本新特性/README.md)
   + [MongoDB](数据库/MongoDB/README.md)

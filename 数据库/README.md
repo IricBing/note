@@ -24,6 +24,7 @@
     - [函数](PostgreSQL/基础篇/函数/README.md)
     - [增删改](PostgreSQL/基础篇/增删改/README.md)
   + [应用篇](PostgreSQL/应用篇/README.md)
+  + [运维篇](PostgreSQL/运维篇/README.md)
   + [psql](PostgreSQL/psql/README.md)
   + [版本新特性](PostgreSQL/版本新特性/README.md)
 
