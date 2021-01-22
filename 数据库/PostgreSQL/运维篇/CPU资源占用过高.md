@@ -91,10 +91,10 @@ MiB Swap:   4096.0 total,   4087.2 free,      8.8 used.  12236.5 avail Mem
 ### 检查正在运行中的查询
 
 ``` sql
-通过top命令拿到pid为25400，专门针对这个查看 
+-- 通过top命令拿到pid为25400，专门针对这个查看 
 # SELECT procpid, START, now() - START AS lap, current_query FROM ( SELECT backendid, pg_stat_get_backend_pid (S.backendid) AS procpid, pg_stat_get_backend_activity_start (S.backendid) AS START,pg_stat_get_backend_activity (S.backendid) AS current_query FROM (SELECT pg_stat_get_backend_idset () AS backendid) AS S) AS S WHERE current_query <> '<IDLE>' and procpid=25400 ORDER BY lap DESC;
 
-针对所有，不知道pid的情况下使用
+-- 针对所有，不知道pid的情况下使用
 # SELECT procpid, START, now() - START AS lap, current_query FROM ( SELECT backendid, pg_stat_get_backend_pid (S.backendid) AS procpid, pg_stat_get_backend_activity_start (S.backendid) AS START,pg_stat_get_backend_activity (S.backendid) AS current_query FROM (SELECT pg_stat_get_backend_idset () AS backendid) AS S) AS S WHERE current_query <> '<IDLE>' ORDER BY lap DESC;
 ```
 
@@ -113,7 +113,7 @@ MiB Swap:   4096.0 total,   4087.2 free,      8.8 used.  12236.5 avail Mem
   254115 | 2021-01-22 09:48:05.31885+08  | 00:00:04.529676 | SELECT "LocationEntity"."created_at" AS "LocationEntity_created_at", "LocationEntity"."updated_at" AS "LocationEntity_updated_at", "LocationEntity"."deleted" AS "LocationEntity_deleted", "LocationEntity"."id" AS "LocationEntity_id", "LocationEntity"."sn" AS "LocationEntity_sn", "LocationEntity"."antenna_sn" AS "LocationEntity_antenna_sn", "LocationEntity"."position_uuid" AS "LocationEntity_position_uuid", "LocationEntity"."status" AS "LocationEntity_status", "LocationEntity"."change_flag" AS "LocationEntity_change_flag", "LocationEntity"."rf125k" AS "LocationEntity_rf125k", "LocationEntity"."rf24g" AS "LocationEntity_rf24g", "LocationEntity"."center_sn" AS "LocationEntity_center_sn" FROM "locations" "LocationEntity" WHERE "LocationEntity"."sn" = $1 ORDER BY "LocationEntity"."created_at" DESC LIMIT 1
 ```
 
-由此可见问题主要发生在 `LocationEntity` 这个表的查询中，分析SQL查询会发现，查询主要有两个约束，一个是sn，一个是center_sn，sn采用相等判定，center_sn采用非空判定，表结构中，这两个都加了索引。不难看出原因是：使用了NOT关键字！这相当于使用了函数，导致索引失效，而且这个表是一个大表，每天积累上千万的数据。因此，先优化这个查询。
+由此可见问题主要发生在 `LocationEntity` 这个表的查询中，分析SQL查询会发现，查询主要有两个约束，一个是 `sn` ，一个是 `center_sn` ， `sn` 采用**相等**判定， `center_sn` 采用**非空**判定，表结构中，这两个都加了**索引**。不难看出原因是：使用了 `NOT` 关键字！这相当于使用了**函数**，导致**索引失效**，而且这个表是一个大表，每天积累上千万的数据。因此，先优化这个查询。
 
 将 `center_sn` 的查询条件： `NOT("LocationEntity"."center_sn" IS NULL)` 修改为： `"LocationEntity"."center_sn" NOTNULL` ，效果显著提升。
 
