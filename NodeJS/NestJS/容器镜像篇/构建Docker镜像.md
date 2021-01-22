@@ -2,7 +2,7 @@
 
 `前提：` 参考笔记[nestjs 工程配置](../工程配置/README.md)添加Docker支持。
 
-## 思想（yarn方式，无静态资源）
+## 思想（yarn方式）
 
 **Step1**
 
@@ -99,9 +99,3 @@ CMD ["node" ,"dist/main.js"]
 `注意：` 其中的 `MICRO_LOG_HOST` 字段、 `DATABASE_HOST` 字段、 `REDIS_TOKEN_HOST` 字段等写的是**Docker网络中的容器名称**
 
 `KAFKA_BROKER_LIST` 字段中的 `"` 需要使用 `\` 来标识。
-
-## 扩展
-
-### npm方式
-
-### 有静态资源目录
