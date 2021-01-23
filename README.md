@@ -135,6 +135,7 @@
   + [合宙](硬件/合宙/README.md)
     - [Luat](硬件/合宙/Luat/README.md)
     - [SmartDTU (iRTU)](硬件/合宙/SmartDTU/README.md)
+  + [字模](硬件/字模/README.md)
 
 * [Linux](Linux/README.md)
   + [基础篇](Linux/基础篇/README.md)
