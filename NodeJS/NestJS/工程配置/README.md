@@ -35,7 +35,9 @@ $ yarn add -D cross-env
   "sourceRoot": "src",
   "compilerOptions": {
     "assets": [
-      "**/*.proto"
+      "**/*.proto",
+      "**/*.graphql",
+      "**/*.prisma"
     ]
   }
 }
