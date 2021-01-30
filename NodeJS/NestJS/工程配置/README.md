@@ -1,18 +1,31 @@
-# NestJS 工程配置篇
-
-**需要安装的插件**
-
-* Prettier - Code formatter
-* ESLint
-* vscode-proto3
-* Clang-Format
+# `NestJS` 工程配置篇
 
 **node 版本**
 
 * v12.x
 * v14.x   `推荐`
 
-## nest-cli.json 文件
+## 安装必要的开发包
+
+### `cross-env`
+
+``` shell
+$ yarn add -D cross-env
+```
+
+修改 `package.json` 文件
+
+``` json
+{
+  "scripts": {
+    "lint": "cross-env NODE_ENV=production eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+  }
+}
+```
+
+## 配置文件部分
+
+### `nest-cli.json` 文件
 
 示例：
 
@@ -28,7 +41,7 @@
 }
 ```
 
-## tsconfig.json 文件
+### `tsconfig.json` 文件
 
 示例：
 
@@ -56,7 +69,7 @@
 }
 ```
 
-## tsconfig.build.json 文件
+### `tsconfig.build.json` 文件
 
 示例：
 
@@ -75,7 +88,7 @@
 }
 ```
 
-## .prettierrc 文件
+### `.prettierrc` 文件
 
 示例：
 
@@ -90,7 +103,7 @@
 }
 ```
 
-## .eslintrc.js 文件
+### `.eslintrc.js` 文件
 
 **示例：**
 
@@ -121,15 +134,20 @@ module.exports = {
         "@typescript-eslint/no-unused-vars": ['warn', {
             "argsIgnorePattern": "^_"
         }],
+        'no-console': process.env.NODE_ENV === 'production' ? ['error', {
+            allow: ['warn', 'error']
+        }] : 'off',
+        'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         'no-var': 0,
         "no-unused-vars": ['warn', {
             "argsIgnorePattern": "^_"
-        }]
+        }],
+        'prefer-rest-params': 0
     },
 };
 ```
 
-## .vscode/settings.json 文件
+### `.vscode/settings.json` 文件
 
 示例：
 
@@ -166,7 +184,7 @@ module.exports = {
 }
 ```
 
-## .vscode/launch.json 文件
+### `.vscode/launch.json` 文件
 
 ``` json
 {
@@ -242,9 +260,27 @@ module.exports = {
 }
 ```
 
-# 可选配置
+### `.vscode/extensions.json` 文件
 
-## 提交代码前自动格式化代码
+``` json
+{
+  "recommendations": [
+    "streetsidesoftware.code-spell-checker",
+    "mikestead.dotenv",
+    "dbaeumer.vscode-eslint",
+    "plex.vscode-protolint",
+    "wayou.vscode-todo-highlight",
+    "gruntfuggly.todo-tree",
+    "esbenp.prettier-vscode",
+    "graphql.vscode-graphql",
+    "prisma.prisma"
+  ]
+}
+```
+
+## 可选配置
+
+### 提交代码前自动格式化代码
 
 `注意：`  `monoRepo` 模式不可用，需要使用 `lerna` 来配置。
 
@@ -265,18 +301,20 @@ $ yarn add -D husky lint-staged
   },
   "lint-staged": {
     "src/**/*.ts": [
-      "prettier --write \"src/**/*.ts\""
+      "prettier --write \"src/**/*.ts\"",
+      "cross-env NODE_ENV=production eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
     ],
     "test/**/*.ts": [
-      "prettier --write \"test/**/*.ts\""
+      "prettier --write \"test/**/*.ts\"",
+      "cross-env NODE_ENV=production eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
     ]
   }
 }
 ```
 
-## 生产环境打包优化
+### 生产环境打包优化
 
-## 新建 tsconfig.build.prod.json 文件
+#### 新建 `tsconfig.build.prod.json` 文件
 
 这是一个新建的文件，主要是为了生产环境构建的时候移除无用信息配置的，这里面还想加入混淆压缩等功能，使用ts官网上的 `gulp+uglify` 搞了半天没成功。。。
 
@@ -313,9 +351,9 @@ $ yarn add -D husky lint-staged
 $ yarn build:prod
 ```
 
-## Docker支持
+### Docker支持
 
-### 新建 .dockerignore 文件
+#### 新建 .dockerignore 文件
 
 内容如下：
 
@@ -328,6 +366,6 @@ $ yarn build:prod
 !./dist/
 ```
 
-### 新建 Dockerfile 文件
+#### 新建 Dockerfile 文件
 
 配置信息依环境而定，本笔记不做示例。
