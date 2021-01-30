@@ -8,3 +8,4 @@
   + [GATT](低功耗蓝牙/GATT.md)
   + [GAP](低功耗蓝牙/GAP.md)
   + [GAP广播数据](低功耗蓝牙/GAP广播数据.md)
+  + [MTU](低功耗蓝牙/MTU.md)
