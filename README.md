@@ -153,6 +153,7 @@
     - [bug 修复](Linux/Ubuntu/bug修复/README.md)
   + [云服务器](Linux/云服务器/README.md)
   + [vmware ESXi 系统](Linux/vmwareESXi/README.md)
+  + [sosumi](Linux/sosumi/README.md)
 
 * [云服务](云服务/README.md)
   + [OSS](云服务/OSS/README.md)
