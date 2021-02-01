@@ -29,3 +29,4 @@
 * [安装flameshot截屏](安装flameshot.md)
 * [安装Python](安装Python.md)
 * [安装pip](安装pip.md)
+* [安装miniconda](安装miniconda.md)
