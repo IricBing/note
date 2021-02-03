@@ -14,12 +14,59 @@
 
 对于 `uni-app` 默认的配置来说，最不可接受的其实是 `pages.json` 文件不可拆分问题，这个问题需要优先解决。但是没有找到合适的自动生成 `pages.json` 文件的包，受到[uniapp-pages-json-cli-build](https://github.com/fengcms/uniapp-pages-json-cli-build)思想的影响，觉得可以通过手写生成脚本来实现。
 
-阅读uni-app关于pages.json的相关文档发现，我们要想实现传统vue项目那种模块化的路由配置只需要关注配置文件中的 `pages` 和 `subPackages` 属性即可。动态生成这两个属性的值，其他的属性可以写到一个文件中。
+阅读 `uni-app` 关于 `pages.json` 的相关文档发现，我们要想实现传统 `vue` 项目那种模块化的路由配置只需要关注配置文件中的 `pages` 和 `subPackages` 属性即可。动态生成这两个属性的值，其他的属性可以写到一个文件中。
 
 因此，我设计的路由模块文件架构如下所示：（源码参见：[uni-app demo](https://git.virtualbing.cn/uni-app/demo)）
 
 ``` shell
-TODO: Linux下搞过来。
+.
+├── api
+│   └── user.js
+├── App.vue
+├── config
+│   └── index.js
+├── main.js
+├── manifest.json
+├── pages
+│   ├── index
+│   │   └── index.vue
+│   └── user
+│       ├── login
+│       └── register
+├── pages.json
+├── router
+│   ├── build.js
+│   ├── guard.js
+│   ├── index.js
+│   └── modules
+│       ├── app
+│       ├── subapp1
+│       └── subapp2
+├── static
+│   └── logo.png
+├── store
+│   ├── index.js
+│   ├── modules
+│   │   └── user.js
+│   └── storage
+│       ├── expiresAt.js
+│       ├── expiresIn.js
+│       ├── guardList.js
+│       ├── roleList.js
+│       ├── token.js
+│       └── userData.js
+├── subpackages
+│   ├── app1
+│   │   └── pages
+│   └── app2
+│       └── pages
+├── uni.scss
+└── utils
+    ├── index.js
+    ├── regular.js
+    └── request.js
+
+22 directories, 23 files
 ```
 
 其中： `router/index.js` 文件中配置的是官方 `pages.json` 除了 `pages` 和 `subPackages` 属性之外的配置，示例：[index.js](https://git.virtualbing.cn/uni-app/demo/blob/82fe40f609f131e540c771e3027b68b3f0b27196/src/router/index.js)
