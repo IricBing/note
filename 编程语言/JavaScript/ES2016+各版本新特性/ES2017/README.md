@@ -7,6 +7,7 @@ nodejs对于ES2017的支持可见 [node.green](https://node.green/#ES2017)
 * [函数语法中支持尾逗号](Trailing_commas.md)
 * [异步函数](异步函数.md)
 * [SharedArrayBuffer](异步函数.md)
+* [正则Unicode模式](正则Unicode模式.md)
 * [Atomics](Atomics/README.md)
   + [介绍](Atomics/介绍.md)
   + 方法
