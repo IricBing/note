@@ -16,8 +16,16 @@
   + [函数语法中支持尾逗号](ES2017/Trailing_commas.md)
   + [异步函数](ES2017/异步函数.md)
   + [SharedArrayBuffer](ES2017/异步函数.md)
+  + [正则Unicode模式](ES2017/正则Unicode模式.md)
+  + [Atomics](ES2017/Atomics/README.md)
 
 * [ES2018](ES2018/README.md)
+  + [Object展开符](ES2018/Object展开符.md)
+  + [Promise.prototype.finally()](ES2018/Promise.prototype.finally.md)
+  + [RegExp.prototype.dotAll](ES2018/RegExp.prototype.dotAll.md)
+  + [正则命名分组](ES2018/正则命名分组.md)
+  + [正则后行断言](ES2018/正则后行断言.md)
+  + [for await 循环](ES2018/for-await-loop.md)
 
 * [ES2019](ES2019/README.md)
 

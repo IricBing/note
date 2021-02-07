@@ -4,8 +4,7 @@
   + [对象篇](基础语法/对象/README.md)
   + [数组篇](基础语法/数组/README.md)
   + [新增数据结构](基础语法/新增数据结构/README.md)
-    - [Set和WeakSet](基础语法/新增数据结构/Set.md)
-    - [Map和WeakMap](基础语法/新增数据结构/Map.md)
+  + [正则](基础语法/正则/README.md)
 
 * [ES2016+各版本新特性](ES2016+各版本新特性/README.md)
 
