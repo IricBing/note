@@ -28,5 +28,9 @@
   + [for await 循环](ES2018/for-await-loop.md)
 
 * [ES2019](ES2019/README.md)
+  + [Object.fromEntries()](ES2019/Object.fromEntries.md)
+  + [string trimming](ES2019/StringTrimming.md)
+  + [Array.prototype.flat()](ES2019/Array.prototype.flat.md)
+  + [Array.prototype.flatMap()](ES2019/Array.prototype.flatMap.md)
 
 * [ES2020](ES2020/README.md)
