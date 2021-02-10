@@ -23,5 +23,6 @@
 
 * [vmware ESXi 系统](vmwareESXi/README.md)
   + [网络篇](vmwareESXi/网络篇/README.md)
+  + [存储篇](vmwareESXi/存储篇/README.md)
 
 * [sosumi](sosumi/README.md)
