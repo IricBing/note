@@ -134,7 +134,7 @@
 * [硬件](硬件/README.md)
   + [基础概念](硬件/基础概念/README.md)
   + [移远](硬件/移远/README.md)
-    - [小熊派]((硬件/移远/小熊派/README.md)
+    - [EC600S V1.1](硬件/移远/EC600S_V1.1/README.md)
   + [合宙](硬件/合宙/README.md)
     - [Luat](硬件/合宙/Luat/README.md)
     - [SmartDTU (iRTU)](硬件/合宙/SmartDTU/README.md)
