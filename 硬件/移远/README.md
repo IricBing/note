@@ -1,3 +1,7 @@
 # 硬件——移远篇
 
 * [EC600S V1.1](EC600S_V1.1/README.md)
+  + [开发板功能布局](EC600S_V1.1/开发板功能布局.md)
+  + [开发环境配置](EC600S_V1.1/开发环境配置.md)
+  + [固件烧录](EC600S_V1.1/固件烧录.md)
+  + [EC600S_CNAA vs EC600S_CNLB](EC600S_V1.1/EC600S_CNAA_vs_EC600S_CNLB.md)
