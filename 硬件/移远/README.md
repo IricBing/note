@@ -5,3 +5,5 @@
   + [开发环境配置](EC600S_V1.1/开发环境配置.md)
   + [固件烧录](EC600S_V1.1/固件烧录.md)
   + [EC600S_CNAA vs EC600S_CNLB](EC600S_V1.1/EC600S_CNAA_vs_EC600S_CNLB.md)
+  + [下载脚本](EC600S_V1.1/下载脚本.md)
+  + [文件系统](EC600S_V1.1/文件系统.md)
