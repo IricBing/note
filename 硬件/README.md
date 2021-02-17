@@ -4,6 +4,7 @@
   + [看门狗](基础概念/看门狗.md)
 
 * [移远](移远/README.md)
+  + [架构设计](移远/架构设计/README.md)
   + [EC600S V1.1](移远/EC600S_V1.1/README.md)
 
 * [合宙](合宙/README.md)

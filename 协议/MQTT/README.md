@@ -1,3 +1,3 @@
 # MQTT 篇
 
-- [QoS](QoS.md)
+* [QoS](QoS.md)
