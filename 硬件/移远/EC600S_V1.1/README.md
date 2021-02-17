@@ -5,4 +5,5 @@
 * [固件烧录](固件烧录.md)
 * [EC600S_CNAA vs EC600S_CNLB](EC600S_CNAA_vs_EC600S_CNLB.md)
 * [下载脚本](下载脚本.md)
+* [运行脚本](运行脚本.md)
 * [文件系统](文件系统.md)
