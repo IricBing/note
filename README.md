@@ -182,6 +182,7 @@
   + 总线协议
     - [RS485](协议/RS485/README.md)
     - [RS232](协议/RS232/README.md)
+    - [I2C](协议/I2C/README.md)
   + [蓝牙协议](协议/蓝牙/README.md)
 
 * [IDE](IDE/README.md)
