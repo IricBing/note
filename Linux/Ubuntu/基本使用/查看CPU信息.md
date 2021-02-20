@@ -428,7 +428,7 @@ address sizes   : 36 bits physical, 48 bits virtual
 power management:
 ```
 
-<details>
+</details>
 
 所以这里总结一些常用的查看命令
 
