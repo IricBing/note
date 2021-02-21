@@ -28,3 +28,33 @@ var3=var1+var2
 从前面截取： :   1   2   3   4   5   :
 从后面截取： :  -5  -4  -3  -2  -1   :
 ```
+
+示例如下：
+
+``` python
+#!/usr/bin/python3.8
+
+str='helloword'
+
+print(str)  # 输出字符串    helloword
+print(str[0:-1])    # 输出第一个到倒数第二个的所有字符  hellowor
+print(str[0])   # 输出字符串的第一个字符    h
+print(str[2:5]) # 输出从第三个开始到第五个的所有字符    llo
+print(str[2:])  # 输出从第三个开始的所有字符    lloword
+print(str*2)    # 输出字符串两次    hellowordhelloword
+print(str+'test')   # 连接字符串    hellowordtest
+```
+
+`Python` 使用**反斜杠** `\` 转义特殊字符，如果不想让反斜杠发生转义，可以在字符串的前面添加一个 `r` ，表示**原始字符**。
+
+``` python
+print('c:\windows\nestjs')
+# c:\windows
+# estjs
+print(r'c:\windows\nestjs')
+# c:\windows\nestjs
+```
+
+另外，反斜杠 `\` 可以作为**续行符**，表示下一行是上一行的延续。也可以使用 `"""..."""` 或 `'''...'''` 跨越多行。
+
+> 温馨提示： `Python` 中没有单独的字符类型，一个字符就是长度为1的字符串。
