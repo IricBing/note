@@ -115,6 +115,8 @@
   + [letsencrypt](运维/letsencrypt/README.md)
   + [Apache Bench （压测）](运维/ApacheBench/README.md)
   + [Nmap](运维/Nmap/README.md)
+  + [Jenkins](运维/Jenkins/README.md)
+  + [Gitlab](运维/Gitlab/README.md)
 
 * [消息中间件](消息中间件/README.md)
   + [Emqx](消息中间件/Emqx/README.md)
