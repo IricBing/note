@@ -23,6 +23,7 @@
     - [运算符](PostgreSQL/基础篇/运算符/README.md)
     - [函数](PostgreSQL/基础篇/函数/README.md)
     - [增删改](PostgreSQL/基础篇/增删改/README.md)
+    - [查询数据](PostgreSQL/基础篇/查询数据/README.md)
   + [应用篇](PostgreSQL/应用篇/README.md)
   + [运维篇](PostgreSQL/运维篇/README.md)
   + [psql](PostgreSQL/psql/README.md)
