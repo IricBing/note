@@ -260,3 +260,11 @@ RouterMount(app, router, '#app');
 app.$mount(); //为了兼容小程序及app端必须这样写才有效果
 // #endif
 ```
+
+## 采坑集锦
+
+### 路由传参
+
+在之前纯 `vue` ，使用 `vue-router` 项目开发时，路由跳转（以 `push` 方法举例），可以通过 `name` 或者 `path` 来定位路由条目，并且通过 `params` 或者 `query` 来进行传参。
+
+在 `uni-simple-router` 这个包中，只能通过 `name + params` 和 `path + query` 这两种方式!!
