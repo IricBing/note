@@ -92,7 +92,7 @@
 }
 ```
 
-## `eslintrc.js` 文件配置
+## `.eslintrc.js` 文件配置
 
 由于文件长度过长，不做展开，可从文件下载： 附件：[.eslintrc.js](assets/files/.eslintrc.js)
 
