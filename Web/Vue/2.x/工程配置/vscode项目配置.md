@@ -1,6 +1,6 @@
 # Vue 项目 vscode 配置
 
-## `.vscode/setting.json` 文件配置
+## `.vscode/settings.json` 文件配置
 
 ``` json
 {
