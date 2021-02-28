@@ -47,3 +47,15 @@
 接下来通过左侧的 `控制台输出` 按钮就能看到编译构建信息了。
 
 ![node_test工程手动构建执行信息](assets/images/node_test工程手动构建执行信息.png)
+
+## 预装包测试
+
+有时候，项目会依赖一些预装包，最典型的就是 `yarn` 。上面已经测试了 `node` 配置，接下来测试一下 `yarn` 配置。
+
+在工程**构建**命令中加入 `yarn -v` 命令，如下所示：
+
+![node_test项目yarn构建测试](assets/images/node_test项目yarn构建测试.png)
+
+接下来**手动执行构建**，并查看控制台输出结果，如下所示即表示成功：
+
+![node_test工程yarn测试结果](assets/images/node_test工程yarn测试结果.png)
