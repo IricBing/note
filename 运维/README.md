@@ -15,6 +15,7 @@
   + [Jenkins中使用Docker](Jenkins/使用Docker.md)
   + [配置ssh key](Jenkins/配置ssh_key.md)
   + [集成私有Gitlab](Jenkins/集成私有Gitlab.md)
+  + [构建历史优化](Jenkins/构建历史优化.md)
   + [nestjs](Jenkins/nestjs/README.md)
     - [配置nodejs](Jenkins/nestjs/配置nodejs.md)
 * [Gitlab](Gitlab/README.md)
