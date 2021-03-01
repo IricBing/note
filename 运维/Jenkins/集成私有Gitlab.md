@@ -10,6 +10,14 @@
 
 ![Jenkins安装Gitlab插件](assets/images/Jenkins安装Gitlab插件.png)
 
+安装 `Git Parameter` 插件。
+
+![Jenkins安装GitParameter插件](assets/images/Jenkins安装GitParameter插件.png)
+
+安装 `Generic Webhook Trigger` 插件。
+
+![Jenkins安装GenericWebhookTrigger插件](assets/images/Jenkins安装GenericWebhookTrigger插件.png)
+
 ## 插件配置
 
 ### `Gitlab` 创建 `Access Token`
