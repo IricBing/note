@@ -270,6 +270,7 @@ module.exports = {
 {
   "recommendations": [
     "streetsidesoftware.code-spell-checker",
+    "aaron-bond.better-comments",
     "mikestead.dotenv",
     "dbaeumer.vscode-eslint",
     "plex.vscode-protolint",

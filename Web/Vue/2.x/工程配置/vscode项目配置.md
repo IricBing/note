@@ -81,6 +81,7 @@
 {
   "recommendations": [
     "streetsidesoftware.code-spell-checker",
+    "aaron-bond.better-comments",
     "mikestead.dotenv",
     "hookyqr.beautify",
     "dbaeumer.vscode-eslint",
