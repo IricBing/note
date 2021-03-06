@@ -23,5 +23,7 @@
 * [uni-app](uni-app/README.md)
   + [工程配置](uni-app/工程配置/README.md)
   + [架构设计](uni-app/架构设计/README.md)
+  + [云函数](uni-app/云函数/README.md)
+  + [周边生态](uni-app/周边生态/README.md)
 * [微信小程序](微信小程序/README.md)
   + [云函数](微信小程序/云函数/README.md)
