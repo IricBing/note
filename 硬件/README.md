@@ -1,5 +1,9 @@
 # 硬件篇
 
+* [OpenWrt](OpenWrt/README.md)
+  + [虚拟机安装](OpenWrt/虚拟机安装/README.md)
+  + [基本使用](OpenWrt/基本使用/README.md)
+
 * [基础概念](基础概念/README.md)
   + [看门狗](基础概念/看门狗.md)
 

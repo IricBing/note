@@ -135,6 +135,9 @@
     - [基础篇](容器/Kubernetes/基础篇/README.md)
 
 * [硬件](硬件/README.md)
+  + [OpenWrt](硬件/OpenWrt/README.md)
+    - [虚拟机安装](硬件/OpenWrt/虚拟机安装/README.md)
+    - [基本使用](硬件/OpenWrt/基本使用/README.md)
   + [基础概念](硬件/基础概念/README.md)
   + [移远](硬件/移远/README.md)
     - [架构设计](硬件/移远/架构设计/README.md)
