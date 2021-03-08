@@ -7,6 +7,7 @@
 * [reflog指令](reflog/README.md)
 * [diff指令](diff/README.md)
 * [回滚代码](回滚代码/README.md)
+* [branch](branch/README.md)
 
 * ignore规则
   + [忽略office临时文件](ignore规则/忽略office临时文件.md)
