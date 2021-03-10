@@ -17,6 +17,7 @@
 * [时区设置](时区设置.md)
 * [修改时间](修改时间.md)
 * [网络时间同步](网络时间同步.md)
+* [依赖库调整](依赖库调整.md)
 
 * 基础命令
   + [apt](基础命令/apt.md)
@@ -27,3 +28,4 @@
   + [screen命令](基础命令/screen命令.md)
   + [showmount命令](基础命令/showmount命令.md)
   + [exportfs命令](基础命令/exportfs命令.md)
+  + [ldd命令](基础命令/ldd命令.md)

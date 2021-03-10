@@ -159,6 +159,7 @@
     - [20.04 特别篇](Linux/Ubuntu/20.04/README.md)
       * [软件安装](Linux/Ubuntu/20.04/软件安装/README.md)
       * [系统配置](Linux/Ubuntu/20.04/系统配置/README.md)
+      + [bug修复](Linux/Ubuntu/20.04/bug修复/README.md)
     - [基本使用](Linux/Ubuntu/基本使用/README.md)
     - [基础知识](Linux/Ubuntu/基础知识/README.md)
     - [bug 修复](Linux/Ubuntu/bug修复/README.md)
