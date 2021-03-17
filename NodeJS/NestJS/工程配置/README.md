@@ -283,6 +283,16 @@ module.exports = {
 }
 ```
 
+### `.gitignore` 文件
+
+``` gitignore
+# environment file
+.env
+
+# ignore npm lock file, use yarn.lock
+package-lock.json
+```
+
 ## 可选配置
 
 ### 提交代码前自动格式化代码
@@ -356,9 +366,9 @@ $ yarn add -D husky lint-staged
 $ yarn build:prod
 ```
 
-### Docker支持
+### `Docker` 支持
 
-#### 新建 .dockerignore 文件
+#### 新建 `.dockerignore` 文件
 
 内容如下：
 
@@ -371,6 +381,6 @@ $ yarn build:prod
 !./dist/
 ```
 
-#### 新建 Dockerfile 文件
+#### 新建 `Dockerfile` 文件
 
 配置信息依环境而定，本笔记不做示例。
