@@ -53,6 +53,8 @@
   + [备份与还原](应用篇/备份与还原.md)
 
 * [运维篇](运维篇/README.md)
+  + [启用pg_stat_statements插件](运维篇/启用pg_stat_statements插件.md)
+  + [慢SQL定位](运维篇/慢SQL定位.md)
   + [CPU资源占用过高](运维篇/CPU资源占用过高.md)
   + [死锁](运维篇/死锁.md)
 
