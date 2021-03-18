@@ -43,6 +43,7 @@
   + [系统架构设计](程序设计/系统架构设计/README.md)
   + [架构思想](程序设计/架构思想/README.md)
   + [测试](程序设计/测试/README.md)
+  + [开发手册](程序设计/开发手册/README.md)
 
 * [数据库](数据库/README.md)
   + [SQL 基础](数据库/SQL/README.md)
