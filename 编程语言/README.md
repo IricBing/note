@@ -21,6 +21,7 @@
     - [pip](Python/生态篇/pip/README.md)
     - [virtualenv](Python/生态篇/virtualenv/README.md)
     - [conda](Python/生态篇/conda/README.md)
+    - [pipenv(推荐使用)](Python/生态篇/pipenv/README.md)
 * [Rust](Rust/README.md)
 
 * [C](C/README.md)

@@ -6,3 +6,4 @@
   + [pip](生态篇/pip/README.md)
   + [virtualenv](生态篇/virtualenv/README.md)
   + [conda](生态篇/conda/README.md)
+  + [pipenv(推荐使用)](生态篇/pipenv/README.md)

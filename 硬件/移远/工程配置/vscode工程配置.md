@@ -31,7 +31,7 @@
 
 ### `koroFileHeader`
 
-`koroFileHeader` 插件默认是支持所有类型文件的头部注释，但是我们通常只需要Python项目有这个东西，其他诸如vue文件，js/ts文件都没有这种需求，因此需要将其配置一下，让其只支持Python文件。
+`koroFileHeader` 插件默认是支持**所有类型**文件的头部注释，但是我们通常只需要 `Python` 项目有这个东西，其他诸如 `vue` 文件， `js/ts` 文件都没有这种需求，因此需要将其配置一下，让其只支持 `Python` 文件。
 
 在**设置页面**输入 `fileheader` ，并打开全局配置 `json` 文件，如下所示：
 
