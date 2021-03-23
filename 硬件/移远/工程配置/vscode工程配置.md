@@ -25,9 +25,29 @@
 
 `Python Docstring Generator` 这个插件默认是采用 `Google` 的注释风格，但是主流用户习惯了 `numpy` 的风格，为了避免采坑，我们选择跟随主流，将 `Python` 的注释风格改为 `numpy` 风格。
 
-在设置页面输入 `autoDoc` ，找到该插件的 `Auto Docstring: Docstring Format` 配置，选择 `numpy` ，如下所示：
+在**设置页面**输入 `autoDoc` ，找到该插件的 `Auto Docstring: Docstring Format` 配置，选择 `numpy` ，如下所示：
 
 ![PythonDocstring插件配置numpy风格](assets/images/PythonDocstring插件配置numpy风格.png)
+
+### `koroFileHeader`
+
+`koroFileHeader` 插件默认是支持所有类型文件的头部注释，但是我们通常只需要Python项目有这个东西，其他诸如vue文件，js/ts文件都没有这种需求，因此需要将其配置一下，让其只支持Python文件。
+
+在**设置页面**输入 `fileheader` ，并打开全局配置 `json` 文件，如下所示：
+
+![进入kora1FileHeader插件配置方式](assets/images/进入kora1FileHeader插件配置方式.png)
+
+按照此插件官方的[配置文档](https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE)，需要找到如下配置：
+
+``` json
+"fileheader.configObj": {
+    "supportAutoLanguage": [ ] // 设置过后只有该数组里面的文件 才会自动添加头部注释
+}
+```
+
+最终配置如下：
+
+![kora1FileHeader插件白名单配置](assets/images/kora1FileHeader插件白名单配置.png)
 
 ### YAPF
 
