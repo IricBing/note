@@ -20,3 +20,30 @@ $ docker stack deploy -c [compose-file] --with-registry-auth kunda [stack 名称
 ``` shell
 $ docker stack deploy -c docker-stack.yml --with-registry-auth kunda
 ```
+
+### 查看所有服务
+
+``` shell
+$ docker stack services <stack_name>
+
+e.g.
+$ docker stack services kunda
+```
+
+### 查看某个服务的任务
+
+``` shell
+$ docker service ps <service_name>
+
+e.g.
+$ docker service ps kunda-kunda_master
+```
+
+### 服务重启
+
+``` shell
+$ docker service update --force <service_name>
+
+e.g.
+$ docker service update --force kunda-kunda_master
+```
