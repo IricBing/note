@@ -47,3 +47,12 @@ $ docker service update --force <service_name>
 e.g.
 $ docker service update --force kunda-kunda_master
 ```
+
+### 停止其中某一项服务
+
+``` shell
+$ docker service update --replicas 0 <service_name>
+
+e.g.
+$ docker service update --replicas 0 kunda-kunda_master
+```
