@@ -1,0 +1,16 @@
+# PostgreSQL 索引原理
+
+* [b-tree](btree.md)
+* [hash](hash.md)
+* [gin](gin.md)
+* [gist](gist.md)
+* [sp-gist](sp-gist.md)
+* [brin](brin.md)
+* [rum](rum.md)
+* [bloom](bloom.md)
+* [zombodb](zombodb.md)
+* [bitmap](bitmap.md)
+* [varbitx](varbitx.md)
+* [zombodb](zombodb.md)
+* [zombodb](zombodb.md)
+* [zombodb](zombodb.md)

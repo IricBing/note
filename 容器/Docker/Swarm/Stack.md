@@ -36,7 +36,7 @@ $ docker stack services kunda
 $ docker service ps <service_name>
 
 e.g.
-$ docker service ps kunda-kunda_master
+$ docker service ps kunda_kunda-master
 ```
 
 ### 服务重启
@@ -45,7 +45,7 @@ $ docker service ps kunda-kunda_master
 $ docker service update --force <service_name>
 
 e.g.
-$ docker service update --force kunda-kunda_master
+$ docker service update --force kunda_kunda-master
 ```
 
 ### 停止其中某一项服务
@@ -54,5 +54,5 @@ $ docker service update --force kunda-kunda_master
 $ docker service update --replicas 0 <service_name>
 
 e.g.
-$ docker service update --replicas 0 kunda-kunda_master
+$ docker service update --replicas 0 kunda_kunda-master
 ```
