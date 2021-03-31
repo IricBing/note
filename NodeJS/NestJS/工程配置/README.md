@@ -299,33 +299,46 @@ package-lock.json
 
 `注意：`  `monoRepo` 模式不可用，需要使用 `lerna` 来配置。
 
-安装 `husky` 和 `lint-staged` 包
+安装 `husky` 和 `lint-staged` 包（因为需要增加 `ENV` 参数，所以还是把 `cross-env` 包装上吧。）
 
 ``` shell
-$ yarn add -D husky lint-staged
+$ yarn add -D husky lint-staged cross-env 
 ```
 
-之后修改 `package.json` 文件，在最后面增加如下规则:
+在项目根目录增加 `.lintstagedrc.json` 文件，写入如下内容：
 
 ``` json
 {
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.ts": [
-      "prettier --write \"src/**/*.ts\"",
-      "cross-env NODE_ENV=production eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
-    ],
-    "test/**/*.ts": [
-      "prettier --write \"test/**/*.ts\"",
-      "cross-env NODE_ENV=production eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
-    ]
+  "src/**/*.ts": [
+    "prettier --write \"src/**/*.ts\"",
+    "cross-env NODE_ENV=production eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+  ],
+  "test/**/*.ts": [
+    "prettier --write \"test/**/*.ts\"",
+    "cross-env NODE_ENV=production eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+  ]
+}
+```
+
+接下来配置 `husky` ，输入如下命令：
+
+``` shell
+$ yarn husky install
+
+$ yarn husky add .husky/pre-commit "npx lint-staged"
+```
+
+最后配置一下 `package.json` 文件，在 `scripts` 脚本中增加一行命令：
+
+``` json
+{
+  "scripts": {
+    "postinstall": "husky install",
   }
 }
 ```
+
+> 提示： `husky` 版本进化很快，还破坏性升级，这就有点难受了，如果发现不好使，可能就是升级了，目前版本： `6.0.0`
 
 ### 生产环境打包优化
 
