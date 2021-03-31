@@ -64,6 +64,8 @@
       - [配置篇](数据库/MySQL/8.0/配置篇/README.md)
     - [5.7](数据库/MySQL/5.7/README.md)
       - [配置篇](数据库/MySQL/5.7/配置篇/README.md)
+  + [SQLite](数据库/SQLite/README.md)
+  + [TDengine](数据库/TDengine/README.md)
 
 * [Git](Git/README.md)
   + [基础用法](Git/基本使用/README.md)
