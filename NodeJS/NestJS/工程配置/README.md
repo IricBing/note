@@ -311,11 +311,13 @@ $ yarn add -D husky lint-staged cross-env
 {
   "src/**/*.ts": [
     "prettier --write \"src/**/*.ts\"",
-    "cross-env NODE_ENV=production eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+    "cross-env NODE_ENV=production eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "git add ."
   ],
   "test/**/*.ts": [
     "prettier --write \"test/**/*.ts\"",
-    "cross-env NODE_ENV=production eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+    "cross-env NODE_ENV=production eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "git add ."
   ]
 }
 ```

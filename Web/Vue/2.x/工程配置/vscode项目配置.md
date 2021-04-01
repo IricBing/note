@@ -429,7 +429,10 @@ $ yarn add -D husky lint-staged cross-env
 
 ``` json
 {
-  "src/**/*{.js,.vue}": ["cross-env NODE_ENV=production vue-cli-service lint"]
+  "src/**/*{.js,.vue}": [
+        "cross-env NODE_ENV=production vue-cli-service lint",
+        "git add ."
+    ]
 }
 ```
 
