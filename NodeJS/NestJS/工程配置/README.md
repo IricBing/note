@@ -183,6 +183,8 @@ module.exports = {
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "typescript.preferences.importModuleSpecifier": "relative", // 使用相对路径
+  "javascript.preferences.importModuleSpecifier": "relative", // 使用相对路径
   "clang-format.executable": "/usr/bin/clang-format", //环境中需要安装 clang-format 软件
   "clang-format.style": "google",
 }

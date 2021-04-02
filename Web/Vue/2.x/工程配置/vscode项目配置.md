@@ -67,6 +67,8 @@
   "[vue]": {
     "editor.defaultFormatter": "octref.vetur"
   },
+  "typescript.preferences.importModuleSpecifier": "relative", // 使用相对路径
+  "javascript.preferences.importModuleSpecifier": "relative", // 使用相对路径
   "prettier.semi": true,
   "prettier.singleQuote": true,
   "html.format.maxPreserveNewLines": 40,
