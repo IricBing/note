@@ -83,6 +83,7 @@
     - [基础篇](NodeJS/NestJS/基础篇/README.md)
     - [微服务篇](NodeJS/NestJS/微服务/README.md)
     - [插件篇](NodeJS/NestJS/插件篇/README.md)
+    - [测试篇](NodeJS/NestJS/测试篇/README.md)
     - [程序设计](NodeJS/NestJS/程序设计/README.md)
     - [容器镜像篇](NodeJS/NestJS/容器镜像篇/README.md)
     - [官方案例讲解](NodeJS/NestJS/官方案例讲解/README.md)
