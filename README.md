@@ -97,7 +97,10 @@
     - [apollo](NodeJS/Graphql/apollo/README.md)
   + [实践积累](NodeJS/实践积累/README.md)
     - [导出Excel](NodeJS/实践积累/导出Excel/README.md)
-  + [运维](NodeJS/运维/README.md)
+  + [运维篇](NodeJS/运维/README.md)
+  + [优化篇](NodeJS/优化篇/README.md)
+  + [常用库](NodeJS/常用库/README.md)
+    - [Zone.js](NodeJS/常用库/Zone/README.md)
 
 * [Web 前端](Web/README.md)
   + [Vue](Web/Vue/README.md)
