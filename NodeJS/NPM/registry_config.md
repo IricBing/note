@@ -26,6 +26,7 @@ electron_builder_binaries_mirror="http://npm.taobao.org/mirrors/electron-builder
 #后台相关
 grpc_node_binary_host_mirror="https://npm.taobao.org/mirrors/"
 node_sqlite3_binary_host_mirror="http://npm.taobao.org/mirrors/"
+nodejieba_binary_host_mirror="https://npm.taobao.org/mirrors/nodejieba"
 ```
 
 ## .yarnrc 文件完整版配置
@@ -49,6 +50,7 @@ electron_builder_binaries_mirror "http://npm.taobao.org/mirrors/electron-builder
 #后台相关
 grpc_node_binary_host_mirror "https://npm.taobao.org/mirrors/"
 node_sqlite3_binary_host_mirror "http://npm.taobao.org/mirrors/"
+nodejieba_binary_host_mirror "https://npm.taobao.org/mirrors/nodejieba"
 ```
 
 ## 附件
