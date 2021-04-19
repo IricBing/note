@@ -45,7 +45,7 @@
       "preserve_newlines": true, // 是否保留现有的换行符
       "max-preserve-newlines": 40, // 一次可保留的最大换行数
       "indent-inner-html": true, //缩进 head body代码片段
-      "wrap_line_length": 1200, //超过多少字符换行
+      "wrap_line_length": 180, //超过多少字符换行
       "editorconfig": false //使用editorconfig设置选项
     }
   },
