@@ -30,3 +30,4 @@
   + [showmount命令](基础命令/showmount命令.md)
   + [exportfs命令](基础命令/exportfs命令.md)
   + [ldd命令](基础命令/ldd命令.md)
+  + [find命令](基础命令/find命令.md)
