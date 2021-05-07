@@ -88,6 +88,7 @@
     - [容器镜像篇](NodeJS/NestJS/容器镜像篇/README.md)
     - [官方案例讲解](NodeJS/NestJS/官方案例讲解/README.md)
     - [原理探究](NodeJS/NestJS/原理探究/README.md)
+    - [实践积累](NodeJS/NestJS/实践积累/README.md)
   + [Express](NodeJS/Express/README.md)
   + [Koa](NodeJS/Koa/README.md)
   + [pm2](NodeJS/pm2/README.md)
