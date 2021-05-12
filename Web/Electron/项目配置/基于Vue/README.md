@@ -24,6 +24,8 @@
 
 最终选择了方案三，这个方案比较新，但是还不够新，这篇文章的记录时间是**2020-12-10**， `vue-cli-plugin-electron-builder` 目前所支持的可选版本分别为： `7.x` ， `8.x` 和 `9.x` 。但是此时 `Electron` 的版本已经是 `11.x` 了。鉴于实力问题，先用这个方案填坑吧。[官网地址](https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/#installation)
 
+> `2021-5-12` 更新，**方案三**目前已经能够支持到**最新版本**的 `Electron` 了！
+
 ## 集成步骤
 
 ### Step1. 搞一个vue项目
@@ -52,7 +54,7 @@ $ yarn electron:serve
 
 `注意：` 这里有坑！！！！！！！！！！！！
 
-经过血的教训的到的经验：通过 `cli` 生成的代码中 `src/background.js` 文件里有一行是下载 `Chrome` 的 `vue开发插件` 的，具体请看 `58行` ，这个 `await installExtension(VUEJS_DEVTOOLS)` 代码。由于我是在 `linux` 下开发的，运行命令后就卡住了（当然卡住了，请求了**Google**了。）然后等了1分钟也没反应，查阅文档也没找到问题，以为有bug。。。后面想可能是 `linux` 开发 `Electron` 太小众了，毕竟 `Electron` 要打包的，而打包基本都是 `Windows` 或者 `Mac` ， `linux` 版很多软件都不提供。然后我就切换到了 `Windows` 来执行，这时候也是这个问题，启动后卡住。但是， `Windows` 的控制台终端抛出了提示：**网络连接不上，vue插件下载不下来！（大致是这个意思）**然后开启全局代理，正常启动了。回到 `linux` ，开启代理，同样成功了。**若没有代理，可注释掉这部分代码。**
+经过血的教训的到的经验：通过 `cli` 生成的代码中 `src/background.js` 文件里有一行是下载 `Chrome` 的 `vue开发插件` 的，具体请看 `58行` ，这个 `await installExtension(VUEJS_DEVTOOLS)` 代码。由于我是在 `linux` 下开发的，运行命令后就卡住了（当然卡住了，请求了**Google**了。）然后等了1分钟也没反应，查阅文档也没找到问题，以为有bug。。。后面想可能是 `linux` 开发 `Electron` 太小众了，毕竟 `Electron` 要打包的，而打包基本都是 `Windows` 或者 `Mac` ， `linux` 版很多软件都不提供。然后我就切换到了 `Windows` 来执行，这时候也是这个问题，启动后卡住。但是， `Windows` 的控制台终端抛出了提示：**网络连接不上，vue插件下载不下来**（大致是这个意思）。然后开启全局代理，正常启动了。回到 `linux` ，开启代理，同样成功了。**若没有代理，可注释掉这部分代码。**
 
 问题代码：
 
