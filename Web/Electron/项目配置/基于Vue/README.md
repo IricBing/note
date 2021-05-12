@@ -1,4 +1,4 @@
-# 基于Vue的Electron项目
+# 基于 `Vue` 的 `Electron` 项目
 
 `Electron` 的核心思想就是将 `chromium` 内核和 `node.js` 组合到一起， `chromium` 负责渲染和显示网页， `node.js` 服务调用系统级 `api` 。那么我们使用 `Electron` 的时候，在编写页面时，就基本上可以按照网页开发的思路和流程来做。既然如此，纯手写原生 `html` ， `css` 这些就太浪费精力了，将前端三大框架集成进 `Electron` 是一个不错的想法。
 
@@ -24,19 +24,19 @@
 
 最终选择了方案三，这个方案比较新，但是还不够新，这篇文章的记录时间是**2020-12-10**， `vue-cli-plugin-electron-builder` 目前所支持的可选版本分别为： `7.x` ， `8.x` 和 `9.x` 。但是此时 `Electron` 的版本已经是 `11.x` 了。鉴于实力问题，先用这个方案填坑吧。[官网地址](https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/#installation)
 
-> `2021-5-12` 更新，**方案三**目前已经能够支持到**最新版本**的 `Electron` 了！
+> `2021-5-12` 更新，**方案三**目前已经能够支持到**最新版本**的 `Electron` 了！最新版为 `12.x`
 
 ## 集成步骤
 
-### Step1. 搞一个vue项目
+### `Step1.` 搞一个vue项目
 
 这里就直接使用 `vue cli` 来生成一个模板项目，之后用 `vscode` 打开。
 
-## Step2. 新建 `.yarnrc` 文件
+## `Step2.` 新建 `.yarnrc` 文件
 
 这个文件作用就不讲了，主要是两个配置： `electron_mirror` 和 `electron_builder_binaries_mirror` ，具体内容请[参考笔记](../../../../NodeJS/NPM/registry_config.md)
 
-## Step3. 集成 `vue-cli-plugin-electron-builder`
+## `Step3.` 集成 `vue-cli-plugin-electron-builder`
 
 终端输入：
 
@@ -44,7 +44,7 @@
 $ vue add electron-builder
 ```
 
-## Step4. 启动项目
+## `Step4.` 启动项目
 
 终端输入：
 
@@ -75,7 +75,7 @@ app.on('ready', async () => {
 })
 ```
 
-## Step5. 项目配置
+## `Step5.` 项目配置
 
 `Electron` 现在默认在**渲染进程**中不允许调用 `node` 中的接口与服务，一般需要打开这个限制，还有一些需要 `rebuild` 的包需要单独声明（这里以 `serialport` 为例）
 
