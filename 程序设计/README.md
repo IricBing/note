@@ -1,6 +1,7 @@
 # 程序设计篇
 
 * [数据结构](数据结构/README.md)
+* [重温数据结构——C语言教材](重温数据结构（C语言教材）/README.md)
 
 * [算法](算法/README.md)
   + [Hash算法](算法/Hash算法/README.md)
