@@ -30,3 +30,4 @@
 * [安装Python](安装Python.md)
 * [安装pip](安装pip.md)
 * [安装miniconda](安装miniconda.md)
+* [安装 DotNet Core](安装DotNetCore.md)
