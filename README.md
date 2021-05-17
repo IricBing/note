@@ -10,11 +10,9 @@
 
 [个人 Gitlab 地址](https://git.virtualbing.cn/Iric/note)
 
-同步更新，贴出两个地址的原因是：两个网站的 Markdown 支持不一致，**GitHub 不支持流程图，Gitlab 不支持 webp 格式图片**，如遇显示问题，可切换地址查看！
-
 流程图相关请使用 `vscode` 查看，安装[Markdown Preview Mermaid Support](https://github.com/mjbvz/vscode-markdown-mermaid)插件，[mermaid 流程图语法](https://www.cnblogs.com/q735613050/p/9368331.html)
 
-最兼容的查看方式：**下载到本地，通过 vscode 查看！**
+最优的查看方式：**下载到本地，通过 vscode 查看！**
 
 # 总纲
 
