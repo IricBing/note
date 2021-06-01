@@ -2,13 +2,13 @@
 
 ## 简介
 
-这种认证方法结合了 Session 和 Cookie。服务端将本次会话信息以 Session 对象的形式保存在服务端的内存、数据库或文件系统中，并将对应的 Session 对象 ID 值 SessionID 以 Cookie 形式返回给客户端，SessionID 保存在客户端的 Cookie 中。
+这种认证方法结合了 `Session` 和 `Cookie` 。服务端将本次会话信息以 `Session` 对象的形式保存在服务端的内存、数据库或文件系统中，并将对应的 `Session` 对象 `ID` 值 `SessionID` 以 `Cookie` 形式返回给客户端， `SessionID` 保存在客户端的 `Cookie` 中。
 
-这是一种 `有状态的认证方法` ：服务端保存 Session 对象，客户端以 Cookie 形式保存 SessionID。
+这是一种 `有状态的认证方法` ：服务端保存 `Session` 对象，客户端以 `Cookie` 形式保存 `SessionID` 。
 
 ## 交互流程
 
-``` mermaid
+```mermaid
 sequenceDiagram
     participant 客户端
     participant 服务器
