@@ -185,6 +185,7 @@
 * [云服务](云服务/README.md)
   + [OSS](云服务/OSS/README.md)
   + [CDN](云服务/CDN/README.md)
+  + [短信平台](云服务/短信平台/README.md)
 
 * [矛与盾（安全攻防）](矛与盾/README.md)
   + [矛（攻击篇）](矛与盾/矛/README.md)
