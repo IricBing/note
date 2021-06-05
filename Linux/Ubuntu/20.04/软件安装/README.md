@@ -1,5 +1,4 @@
 # 软件安装篇
-
 * [安装vim](安装vim.md)
 * [安装Git](安装Git.md)
 * [安装screen](安装screen.md)
@@ -31,3 +30,4 @@
 * [安装pip](安装pip.md)
 * [安装miniconda](安装miniconda.md)
 * [安装 DotNet Core](安装DotNetCore.md)
+* [安装VLC视频播放器](安装VLC视频播放器.md)
