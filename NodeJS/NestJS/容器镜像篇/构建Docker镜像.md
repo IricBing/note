@@ -12,6 +12,8 @@
 
 基础镜像选择 `node:14.15.0-alpine` ，（ `注意：` 版本应该来自于项目的 `.nvmrc` 文件！）
 
+并设置一些辅助配置，例如：时区、node可用内存等。
+
 **Step3**
 
 将 `dist` 文件夹， `package.json` 文件， `.env` 文件， `yarn.lock` 文件通过 `COPY` 指令拷贝到容器中的工程目录。
@@ -36,14 +38,20 @@
 
 ## 完整文件
 
-示例：（附件下载：[Dockerfile](assets/files/基础版Dockerfile)）
+示例：（附件下载：[Dockerfile](assets/files/基础版Dockerfile)、[.dockerignore](assets/files/.dockerignore)）
 
-``` Dockerfile
+```Dockerfile
 FROM node:14.15.0-alpine
 
 LABEL maintainer="Iric<iricbing@gmail.com>"
 
 WORKDIR /app
+
+# 设置时区
+RUN echo "Asia/Shanghai" > /etc/timezone && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
+
+# 设置NODE最大可用内存
+ENV NODE_OPTIONS=--max-old-space-size=6144
 
 COPY . .
 
