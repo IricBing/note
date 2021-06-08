@@ -53,7 +53,7 @@ RUN echo "Asia/Shanghai" > /etc/timezone && ln -sf /usr/share/zoneinfo/Asia/Shan
 # 设置NODE最大可用内存
 ENV NODE_OPTIONS=--max-old-space-size=6144
 
-# 此处可以这样写的原因是在Dockerfile文件相同目录下有.dockerignore文件（类似于git提交时的gitignore文件）
+# 此处可以这样写的原因是在Dockerfile文件相同目录下有.dockerignore文件（类似于git提交时的.gitignore文件）
 COPY . .    
 
 RUN yarn install

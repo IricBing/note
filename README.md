@@ -68,6 +68,7 @@
 * [Git](Git/README.md)
   + [基础用法](Git/基本使用/README.md)
   + [Gitlab](Git/Gitlab/README.md)
+  + [Gitea](Git/Gitea/README.md)
 
 * [NodeJS](NodeJS/README.md)
   + [NPM](NodeJS/NPM/README.md)
