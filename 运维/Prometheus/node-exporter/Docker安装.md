@@ -4,6 +4,7 @@
 
 ```shell
 $ docker run -d \
+    --restart=always \
     --net="host" \
     --pid="host" \
     -v "/:/host:ro,rslave" \
