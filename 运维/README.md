@@ -1,5 +1,4 @@
 # 运维篇
-
 * [Nginx](Nginx/README.md)
 * [letsencrypt](letsencrypt/README.md)
 * [frp](frp/README.md)
@@ -20,3 +19,8 @@
     - [配置nodejs](Jenkins/nestjs/配置nodejs.md)
 * [Gitlab](Gitlab/README.md)
   + [CI/CD](Gitlab/cicd/README.md)
+* [Prometheus](Prometheus/README.md)
+  + [介绍](Prometheus/介绍.md)
+  + [Node Exporter](Prometheus/node-exporter/README.md)
+    - [介绍](Prometheus/node-exporter/介绍.md)
+    - [Docker安装](Prometheus/node-exporter/Docker安装.md)

@@ -129,6 +129,7 @@
   + [Nmap](运维/Nmap/README.md)
   + [Jenkins](运维/Jenkins/README.md)
   + [Gitlab](运维/Gitlab/README.md)
+  + [Prometheus](运维/Prometheus/README.md)
 
 * [消息中间件](消息中间件/README.md)
   + [Emqx](消息中间件/Emqx/README.md)
