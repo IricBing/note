@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN yarn install
+RUN yarn install --prod
 
 EXPOSE 3000
 

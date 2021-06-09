@@ -56,9 +56,12 @@ ENV NODE_OPTIONS=--max-old-space-size=6144
 # 此处可以这样写的原因是在Dockerfile文件相同目录下有.dockerignore文件（类似于git提交时的.gitignore文件）
 COPY . .    
 
-RUN yarn install
+# 只安装生产依赖
+RUN yarn install --prod
 
 EXPOSE 3000
+
+ENV NODE_ENV=production
 
 # 基础配置
 ENV COMMON_JWT_EXPIRES_IN=7200000
