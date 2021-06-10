@@ -1,48 +1,51 @@
-version: "3"
+version: "3.8"
 services:
   postgres:
-    image: postgres
+    image: postgres:13-alpine
+    container_name: postgresql
     restart: always
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: p5tgb6tfc%^
+      POSTGRES_PASSWORD: 123456
       POSTGRES_DB: iot
       TZ: Asia/Shanghai
       PGTZ: Asia/Shanghai
     ports:
-      - "5432:5432"
+      - 5432:5432
     volumes:
-      - $PWD/pg-data:/var/lib/postgresql/data
-    container_name: postgresql
+      - ./pg-data:/var/lib/postgresql/data
 
   pgadmin:
     image: dpage/pgadmin4:latest
+    container_name: pgadmin
     restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: iricbing@gmail.com
-      PGADMIN_DEFAULT_PASSWORD: p5tgb6tfc%^
+      PGADMIN_DEFAULT_PASSWORD: 123456
     ports:
-      - "5433:80"
-    container_name: pgadmin
+      - 5433:80
 
   mongodb:
-    image: mongo
+    image: mongo:4.4.2-bionic
+    container_name: mongodb
     restart: always
     ports:
       - 27017:27017
     volumes:
-      - $PWD/mongo-data:/data
+      - ./mongo-data:/data
       - /etc/localtime:/etc/localtime:ro
-    container_name: mongodb
 
   redis:
     image: "redis:alpine"
+    container_name: redis
     restart: always
     ports:
       - "6379:6379"
     volumes:
-      - $PWD/redis-data:/var/lib/redis
-      - $PWD/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./redis-data:/data
+      - /etc/localtime:/etc/localtime:ro
     environment:
+      # - REDIS_PASS=mypassword
       - REDIS_REPLICATION_MODE=master
-    container_name: redis
+      - REDIS_APPENDONLY=yes
+      - REDIS_APPENDFSYNC=always
