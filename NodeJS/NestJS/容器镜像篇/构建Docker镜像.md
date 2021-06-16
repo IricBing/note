@@ -57,7 +57,7 @@ ENV NODE_OPTIONS=--max-old-space-size=6144
 COPY . .    
 
 # 只安装生产依赖
-RUN yarn install --prod
+RUN yarn install --prod --ignore-scripts
 
 EXPOSE 3000
 
