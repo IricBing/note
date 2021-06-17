@@ -88,8 +88,5 @@ eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE1OTM5NTU5NDMsInVpZCI6MTAsImV4cCI6MTU5Mzk1NTk3
 例如，如果要使用 `HMAC SHA256` 算法，则将通过以下方式创建签名：
 
 ```javascript
-HMACSHA256(
-    base64UrlEncode(header) + "." +
-    base64UrlEncode(payload),
-    secret)
+HMACSHA256(base64UrlEncode(header) + "." + base64UrlEncode(payload), secret)
 ```
