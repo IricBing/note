@@ -9,13 +9,13 @@
 
 ### `cross-env`
 
-``` shell
+```shell
 $ yarn add -D cross-env
 ```
 
 修改 `package.json` 文件
 
-``` json
+```json
 {
   "scripts": {
     "lint": "cross-env NODE_ENV=production eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
@@ -29,7 +29,7 @@ $ yarn add -D cross-env
 
 示例：
 
-``` json
+```json
 {
   "collection": "@nestjs/schematics",
   "sourceRoot": "src",
@@ -38,7 +38,8 @@ $ yarn add -D cross-env
       "**/*.proto",
       "**/*.graphql",
       "**/*.prisma"
-    ]
+    ],
+    "watchAssets": true
   }
 }
 ```
@@ -47,7 +48,7 @@ $ yarn add -D cross-env
 
 示例：
 
-``` json
+```json
 {
   "compilerOptions": {
     "module": "commonjs",
@@ -75,7 +76,7 @@ $ yarn add -D cross-env
 
 示例：
 
-``` json
+```json
 {
   "extends": "./tsconfig.json",
   "include": [  //include 属性是用来避免在开发时更改静态资源（通常为public文件夹下的内容）而导致服务重启的情况，仅监听src文件下所有文件
@@ -94,7 +95,7 @@ $ yarn add -D cross-env
 
 示例：
 
-``` json
+```json
 {
   "singleQuote": true,
   "trailingComma": "none",
@@ -109,7 +110,7 @@ $ yarn add -D cross-env
 
 **示例：**
 
-``` javascript
+```javascript
 module.exports = {
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -155,7 +156,7 @@ module.exports = {
 
 示例：
 
-``` json
+```json
 {
   "editor.detectIndentation": false, // vscode默认启用了根据文件类型自动设置tabsize的选项
   "editor.tabSize": 2, // 重新设定tabsize
@@ -192,7 +193,7 @@ module.exports = {
 
 ### `.vscode/launch.json` 文件
 
-``` json
+```json
 {
   // Use IntelliSense to learn about possible attributes.
   // Hover to view descriptions of existing attributes.
@@ -268,7 +269,7 @@ module.exports = {
 
 ### `.vscode/extensions.json` 文件
 
-``` json
+```json
 {
   "recommendations": [
     "streetsidesoftware.code-spell-checker",
@@ -287,7 +288,7 @@ module.exports = {
 
 ### `.gitignore` 文件
 
-``` gitignore
+```gitignore
 # environment file
 .env
 
@@ -303,13 +304,13 @@ package-lock.json
 
 安装 `husky` 和 `lint-staged` 包（因为需要增加 `ENV` 参数，所以还是把 `cross-env` 包装上吧。）
 
-``` shell
+```shell
 $ yarn add -D husky lint-staged cross-env 
 ```
 
 在项目根目录增加 `.lintstagedrc.json` 文件，写入如下内容：
 
-``` json
+```json
 {
   "src/**/*.ts": [
     "prettier --write \"src/**/*.ts\"",
@@ -326,7 +327,7 @@ $ yarn add -D husky lint-staged cross-env
 
 接下来配置 `husky` ，输入如下命令：
 
-``` shell
+```shell
 $ yarn husky install
 
 $ yarn husky add .husky/pre-commit "npx lint-staged"
@@ -334,7 +335,7 @@ $ yarn husky add .husky/pre-commit "npx lint-staged"
 
 最后配置一下 `package.json` 文件，在 `scripts` 脚本中增加一行命令：
 
-``` json
+```json
 {
   "scripts": {
     "postinstall": "husky install",
@@ -350,7 +351,7 @@ $ yarn husky add .husky/pre-commit "npx lint-staged"
 
 这是一个新建的文件，主要是为了生产环境构建的时候移除无用信息配置的，这里面还想加入混淆压缩等功能，使用ts官网上的 `gulp+uglify` 搞了半天没成功。。。
 
-``` json
+```json
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
@@ -369,7 +370,7 @@ $ yarn husky add .husky/pre-commit "npx lint-staged"
 
 修改 `package.json` 文件，添加如下命令：
 
-``` json
+```json
 {
   "scripts": {
     "build:prod": "rimraf dist && nest build -p tsconfig.build.prod.json",
@@ -379,7 +380,7 @@ $ yarn husky add .husky/pre-commit "npx lint-staged"
 
 以后生产环境构建使用如下命令：
 
-``` shell
+```shell
 $ yarn build:prod
 ```
 
@@ -389,7 +390,7 @@ $ yarn build:prod
 
 内容如下：
 
-``` gitignore
+```gitignore
 **/*
 !package.json
 !.yarnrc

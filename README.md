@@ -31,6 +31,8 @@
     - [基础篇](编程语言/Python/基础篇/README.md)
     - [生态篇](编程语言/Python/生态篇/README.md)
   + [Rust](编程语言/Rust/README.md)
+    - [环境配置](编程语言/Rust/环境配置/README.md)
+    - [基础篇](编程语言/Rust/基础篇/README.md)
   + [C](编程语言/C/README.md)
 
 * [程序设计](程序设计/README.md)

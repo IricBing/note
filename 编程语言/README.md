@@ -1,5 +1,4 @@
 # 语言篇
-
 * [JavaScript](JavaScript/README.md)
   + [基础语法篇](JavaScript/基础语法/README.md)
   + [ES2016+各版本新特性](JavaScript/ES2016+各版本新特性/README.md)
@@ -23,5 +22,7 @@
     - [conda](Python/生态篇/conda/README.md)
     - [pipenv(推荐使用)](Python/生态篇/pipenv/README.md)
 * [Rust](Rust/README.md)
+  + [环境配置](Rust/环境配置/README.md)
+  + [基础篇](Rust/基础篇/README.md)
 
 * [C](C/README.md)
