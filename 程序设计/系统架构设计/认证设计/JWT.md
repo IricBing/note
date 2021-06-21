@@ -36,6 +36,8 @@ $ echo  -n '{"alg":"HS256","typ":"JWT"}'|base64
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 ```
 
+> 提示：此命令需要在 `Linux` 环境下执行。
+
 ### `Payload` 部分
 
 `Payload` 是有关**实体**（通常是用户）和其他数据的声明，它包含**三部分**：
@@ -90,3 +92,13 @@ eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE1OTM5NTU5NDMsInVpZCI6MTAsImV4cCI6MTU5Mzk1NTk3
 ```javascript
 HMACSHA256(base64UrlEncode(header) + "." + base64UrlEncode(payload), secret)
 ```
+
+### 整合
+
+输出是三个由**点**分隔的 `Base64-URL` 字符串，可以在 `HTML` 和 `HTTP` 环境中轻松传递这些字符串，与基于 `XML` 的标准（例如 `SAML` ）相比，它更紧凑。
+
+```text
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE1OTM5NTU5NDMsInVpZCI6MTAsImV4cCI6MTU5Mzk1NTk3Mywic2NvcGVzIjpbImFkbWluIiwidXNlciJdfQ.VHpxmxKVKpsn2Iytqc_6Z1U1NtiX3EgVki4PmA-J3Pg"
+```
+
+`JWT` 是**无状态授权机制**，服务器的受保护路由将 `Header` 中检查有效的 `token` , 如果存在，则将允许用户访问受保护的资源。如果 `JWT` 包含必要的数据，则可以减少查询数据库中某些操作的需求。

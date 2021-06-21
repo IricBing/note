@@ -1,5 +1,4 @@
 # NodeJS 篇
-
 * [NPM](NPM/README.md)
   + [换源](NPM/换源.md)
   + [代理](NPM/代理.md)
@@ -30,6 +29,7 @@
 * [运维篇](运维/README.md)
   + [CPU占用过高](运维/CPU占用过高/README.md)
 * [优化篇](优化篇/README.md)
+  + [工程优化](优化篇/工程优化/README.md)
   + [序列化](优化篇/序列化.md)
 * [常用库](常用库/README.md)
   + [Zone.js](常用库/Zone/README.md)
