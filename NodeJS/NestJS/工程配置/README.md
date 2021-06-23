@@ -25,133 +25,6 @@ $ yarn add -D cross-env
 
 ## 配置文件部分
 
-### `nest-cli.json` 文件
-
-示例：
-
-```json
-{
-  "collection": "@nestjs/schematics",
-  "sourceRoot": "src",
-  "compilerOptions": {
-    "assets": [
-      "**/*.proto",
-      "**/*.graphql",
-      "**/*.prisma"
-    ],
-    "watchAssets": true
-  }
-}
-```
-
-### `tsconfig.json` 文件
-
-示例：
-
-```json
-{
-  "compilerOptions": {
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    //node 12.x
-    // "lib": [        //当需要高级语法时，扩充此字段
-    //   "ES2020"
-    // ],
-    // "target": "es2019", //这里需要按照当前使用node的版本来选择打包版本
-    //node 14.x
-    "target": "es2020",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true
-  }
-}
-```
-
-### `tsconfig.build.json` 文件
-
-示例：
-
-```json
-{
-  "extends": "./tsconfig.json",
-  "include": [  //include 属性是用来避免在开发时更改静态资源（通常为public文件夹下的内容）而导致服务重启的情况，仅监听src文件下所有文件
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "test",
-    "dist",
-    "**/*spec.ts"
-  ]
-}
-```
-
-### `.prettierrc` 文件
-
-示例：
-
-```json
-{
-  "singleQuote": true,
-  "trailingComma": "none",
-  "semi": true,
-  "printWidth": 200,
-  "bracketSpacing": true,
-  "arrowParens": "avoid"
-}
-```
-
-### `.eslintrc.js` 文件
-
-**示例：**
-
-```javascript
-module.exports = {
-    parser: '@typescript-eslint/parser',
-    parserOptions: {
-        project: 'tsconfig.json',
-        sourceType: 'module',
-    },
-    plugins: ['@typescript-eslint/eslint-plugin'],
-    extends: [
-        'plugin:@typescript-eslint/recommended',
-        'plugin:prettier/recommended',
-        'prettier',
-    ],
-    root: true,
-    env: {
-        node: true,
-        jest: true,
-    },
-    ignorePatterns: ['.eslintrc.js'],
-    rules: {
-        '@typescript-eslint/interface-name-prefix': 'off',
-        '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/explicit-module-boundary-types': 'off',
-        '@typescript-eslint/no-explicit-any': 'off',
-        "@typescript-eslint/no-empty-interface": 'off',
-        "@typescript-eslint/ban-types": 'off',
-        "@typescript-eslint/no-unused-vars": ['warn', {
-            "argsIgnorePattern": "^_"
-        }],
-        'no-console': process.env.NODE_ENV === 'production' ? ['error', {
-            allow: ['warn', 'error']
-        }] : 'off',
-        'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-        'no-var': 0,
-        "no-unused-vars": ['warn', {
-            "argsIgnorePattern": "^_"
-        }],
-        'prefer-rest-params': 0
-    },
-};
-```
-
 ### `.vscode/settings.json` 文件
 
 示例：
@@ -284,6 +157,133 @@ module.exports = {
     "prisma.prisma"
   ]
 }
+```
+
+### `nest-cli.json` 文件
+
+示例：
+
+```json
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "assets": [
+      "**/*.proto",
+      "**/*.graphql",
+      "**/*.prisma"
+    ],
+    "watchAssets": true
+  }
+}
+```
+
+### `tsconfig.json` 文件
+
+示例：
+
+```json
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    //node 12.x
+    // "lib": [        //当需要高级语法时，扩充此字段
+    //   "ES2020"
+    // ],
+    // "target": "es2019", //这里需要按照当前使用node的版本来选择打包版本
+    //node 14.x
+    "target": "es2020",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true
+  }
+}
+```
+
+### `tsconfig.build.json` 文件
+
+示例：
+
+```json
+{
+  "extends": "./tsconfig.json",
+  "include": [  //include 属性是用来避免在开发时更改静态资源（通常为public文件夹下的内容）而导致服务重启的情况，仅监听src文件下所有文件
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "test",
+    "dist",
+    "**/*spec.ts"
+  ]
+}
+```
+
+### `.prettierrc` 文件
+
+示例：
+
+```json
+{
+  "singleQuote": true,
+  "trailingComma": "none",
+  "semi": true,
+  "printWidth": 200,
+  "bracketSpacing": true,
+  "arrowParens": "avoid"
+}
+```
+
+### `.eslintrc.js` 文件
+
+**示例：**
+
+```javascript
+module.exports = {
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        project: 'tsconfig.json',
+        sourceType: 'module',
+    },
+    plugins: ['@typescript-eslint/eslint-plugin'],
+    extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:prettier/recommended',
+        'prettier',
+    ],
+    root: true,
+    env: {
+        node: true,
+        jest: true,
+    },
+    ignorePatterns: ['.eslintrc.js'],
+    rules: {
+        '@typescript-eslint/interface-name-prefix': 'off',
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        "@typescript-eslint/no-empty-interface": 'off',
+        "@typescript-eslint/ban-types": 'off',
+        "@typescript-eslint/no-unused-vars": ['warn', {
+            "argsIgnorePattern": "^_"
+        }],
+        'no-console': process.env.NODE_ENV === 'production' ? ['error', {
+            allow: ['warn', 'error']
+        }] : 'off',
+        'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+        'no-var': 0,
+        "no-unused-vars": ['warn', {
+            "argsIgnorePattern": "^_"
+        }],
+        'prefer-rest-params': 0
+    },
+};
 ```
 
 ### `.gitignore` 文件
