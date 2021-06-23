@@ -1,5 +1,4 @@
 # 系统架构设计篇
-
 * [权限设计](权限设计/README.md)
   + [RBAC权限设计](权限设计/RBAC权限设计.md)
     - [RBAC扩展权限设计](权限设计/RBAC扩展.md)
@@ -16,3 +15,4 @@
   + [redis单机实现](分布式锁设计/redis单机实现.md)
   + [redis集群实现](分布式锁设计/redis集群实现.md)
   + [Zookeeper实现](分布式锁设计/Zookeeper实现.md)
+* [短信验证码设计](短信验证码设计/README.md)

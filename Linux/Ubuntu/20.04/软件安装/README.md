@@ -15,6 +15,8 @@
   + [分片集](MongoDB/分片集.md)
 * [安装Postgresql](Postgresql/README.md)
   + [单机版](Postgresql/单机版.md)
+* [安装TDengine](TDengine/README.md)
+  + [单机版](TDengine/单机版.md)
 * [安装MySQL](MySQL/README.md)
   + [单机版](MySQL/单机版.md)
 * [安装qq和微信](qq和微信.md)
