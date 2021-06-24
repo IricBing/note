@@ -77,6 +77,7 @@ $ yarn add -D cross-env
       "type": "node",
       "request": "launch",
       "name": "Debug locate master server",
+      "runtimeVersion": "14.17.0", // 这里要按照项目的 .nvmrc文件进行修改！
       "args": [
         "${workspaceFolder}/src/main.ts"
       ],
@@ -93,6 +94,7 @@ $ yarn add -D cross-env
       "type": "node",
       "request": "launch",
       "name": "Jest All",
+      "runtimeVersion": "14.17.0", // 这里要按照项目的 .nvmrc文件进行修改！
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "args": [
         "--runInBand"
@@ -108,9 +110,10 @@ $ yarn add -D cross-env
       "type": "node",
       "request": "launch",
       "name": "Jest Current File",
+      "runtimeVersion": "14.17.0", // 这里要按照项目的 .nvmrc文件进行修改！
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "args": [
-        "${fileBasenameNoExtension}"
+        "/${fileBasenameNoExtension}"
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
@@ -123,6 +126,7 @@ $ yarn add -D cross-env
       "type": "node",
       "request": "launch",
       "name": "Jest e2e test",
+      "runtimeVersion": "14.17.0", // 这里要按照项目的 .nvmrc文件进行修改！
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "args": [
         "--config",
