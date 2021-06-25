@@ -21,3 +21,5 @@ $ gvm use go1.16 --default
 $ gvm version
 go version go1.16 linux/amd64
 ```
+
+## `pkgset` 配置
