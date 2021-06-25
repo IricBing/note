@@ -23,3 +23,12 @@ Please restart your terminal session or to get started right away run
 ```shell
 $ source /home/iric/.gvm/scripts/gvm
 ```
+
+## 配置代理
+
+生在天朝，你懂得
+
+```shell
+$ go env -w GO111MODULE=on
+$ go env -w GOPROXY=https://goproxy.cn,direct
+```
