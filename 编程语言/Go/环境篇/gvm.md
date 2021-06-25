@@ -15,7 +15,7 @@ $ gvm install go1.4 -B
 $ gvm use go1.4
 $ export GOROOT_BOOTSTRAP=$GOROOT
 $ gvm install go1.16
-$ gvm use go1.6
+$ gvm use go1.16 --default
 
 # 安装完成，验证
 $ gvm version
