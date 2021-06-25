@@ -3,6 +3,7 @@
 * [安装Git](安装Git.md)
 * [安装screen](安装screen.md)
 * [安装nvm](安装nvm.md)
+* [安装gvm](安装gvm.md)
 * [安装Nginx](安装Nginx.md)
 * [安装Docker](安装Docker.md)
 * [安装Docker Compose](安装DockerCompose.md)

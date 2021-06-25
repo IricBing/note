@@ -34,6 +34,9 @@
     - [环境配置](编程语言/Rust/环境配置/README.md)
     - [基础篇](编程语言/Rust/基础篇/README.md)
   + [C](编程语言/C/README.md)
+  + [Go](编程语言/Go/README.md)
+    - [环境篇](编程语言/Go/环境篇/README.md)
+    - [基础篇](编程语言/Go/基础篇/README.md)
 
 * [程序设计](程序设计/README.md)
   + [数据结构](程序设计/数据结构/README.md)
