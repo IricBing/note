@@ -238,7 +238,7 @@ $ yarn add -D cross-env
   "singleQuote": true,
   "trailingComma": "none",
   "semi": true,
-  "printWidth": 200,
+  "printWidth": 160,
   "bracketSpacing": true,
   "arrowParens": "avoid"
 }
