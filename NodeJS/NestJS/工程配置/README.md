@@ -157,8 +157,7 @@ $ yarn add -D cross-env
     "wayou.vscode-todo-highlight",
     "gruntfuggly.todo-tree",
     "esbenp.prettier-vscode",
-    "graphql.vscode-graphql",
-    "prisma.prisma"
+    "xaver.clang-format"
   ]
 }
 ```
