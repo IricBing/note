@@ -38,6 +38,8 @@
     - [环境篇](编程语言/Go/环境篇/README.md)
     - [基础篇](编程语言/Go/基础篇/README.md)
     - [生态篇](编程语言/Go/生态篇/README.md)
+  + [Java](编程语言/Java/README.md)
+    - [环境篇](编程语言/Java/环境篇/README.md)
 
 * [程序设计](程序设计/README.md)
   + [数据结构](程序设计/数据结构/README.md)
