@@ -194,6 +194,11 @@
   + [vmware ESXi 系统](Linux/vmwareESXi/README.md)
   + [sosumi](Linux/sosumi/README.md)
 
+* [Java](Java/README.md)
+  + [Vert.x](Java/Vertx/README.md)
+    - [案例篇]Java/(Vertx/案例篇/README.md)
+  + [Netty](Java/Netty/README.md)
+
 * [JavaScript引擎](JavaScript引擎/README.md)
   + [V8](JavaScript引擎/V8/README.md)
   + [QuickJS](JavaScript引擎/QuickJS/README.md)
