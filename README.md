@@ -235,6 +235,7 @@
   + [vscode](IDE/vscode/README.md)
   + [Android Studio](IDE/AndroidStudio/README.md)
   + [Visual Studio](IDE/vs/README.md)
+  + [Intellij IDEA](IDE/Intellij/README.md)
 
 * [星辰大海](星辰大海/README.md)
   + [图片文字识别](星辰大海/图片文字识别/README.md)
