@@ -34,3 +34,4 @@
 * [安装miniconda](安装miniconda.md)
 * [安装 DotNet Core](安装DotNetCore.md)
 * [安装VLC视频播放器](安装VLC视频播放器.md)
+* [安装Jetbrains Intellij](安装JetBrainsIntellij.md)
