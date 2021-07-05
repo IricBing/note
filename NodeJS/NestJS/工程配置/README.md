@@ -292,6 +292,8 @@ module.exports = {
 ### `.gitignore` 文件
 
 ```gitignore
+/target
+
 # environment file
 .env
 
