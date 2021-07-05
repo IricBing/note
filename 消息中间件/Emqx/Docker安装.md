@@ -40,9 +40,22 @@ services:
       - vol-emqx-data:/opt/emqx/data
       - vol-emqx-etc:/opt/emqx/etc
       - vol-emqx-log:/opt/emqx/log
-    # environment:
-    #   EMQX_NAME: emqx
-    #   EMQX_HOST: 127.0.0.1
+    environment:
+      EMQX_ALLOW_ANONYMOUS: 'false' # 禁止匿名连接
+      EMQX_ACL_NOMATCH: deny  # ACL未命中时，拒绝 发布/订阅 操作
+      EMQX_ENABLE_ACL_CACHE: 'off'  # 关闭ACL鉴权缓存
+      EMQX_AUTH__HTTP__AUTH_REQ__URL: http://127.0.0.1:3000/emqx/auth
+      EMQX_AUTH__HTTP__AUTH_REQ__METHOD: post
+      EMQX_AUTH__HTTP__AUTH_REQ__CONTENT_TYPE: json
+      EMQX_AUTH__HTTP__AUTH_REQ__PARAMS: client_id=%c,username=%u,password=%P,ip_address=%a,protocol=%r
+      EMQX_AUTH__HTTP__SUPER_REQ__URL: http://127.0.0.1:3000/emqx/superuser
+      EMQX_AUTH__HTTP__SUPER_REQ__METHOD: post
+      EMQX_AUTH__HTTP__SUPER_REQ__CONTENT_TYPE: json
+      EMQX_AUTH__HTTP__SUPER_REQ__PARAMS: client_id=%c,username=%u
+      EMQX_AUTH__HTTP__ACL_REQ__URL: http://127.0.0.1:3000/emqx/acl
+      EMQX_AUTH__HTTP__ACL_REQ__METHOD: get
+      EMQX_AUTH__HTTP__ACL_REQ__CONTENT_TYPE: json
+      EMQX_AUTH__HTTP__ACL_REQ__PARAMS: access=%A,username=%u,client_id=%c,ip_address=%a,topic=%t,mount_point=%m,protocol=%r
 ```
 
 ### 线上部署环境
