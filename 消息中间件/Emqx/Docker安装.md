@@ -40,6 +40,7 @@ services:
       - vol-emqx-data:/opt/emqx/data
       - vol-emqx-etc:/opt/emqx/etc
       - vol-emqx-log:/opt/emqx/log
+      - /etc/localtime:/etc/localtime:ro
     environment:
       EMQX_ALLOW_ANONYMOUS: 'false' # 禁止匿名连接
       EMQX_ACL_NOMATCH: deny  # ACL未命中时，拒绝 发布/订阅 操作
@@ -85,6 +86,7 @@ services:
       - vol-emqx-data:/opt/emqx/data
       - vol-emqx-etc:/opt/emqx/etc
       - vol-emqx-log:/opt/emqx/log
+      - /etc/localtime:/etc/localtime:ro
     # environment:
     #   EMQX_NAME: emqx
     #   EMQX_HOST: 127.0.0.1
