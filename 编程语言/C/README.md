@@ -3,3 +3,6 @@
 * [环境篇](环境篇/README.md)
   + [Ubuntu环境配置](环境篇/Ubuntu环境配置.md)
 * [语法篇](语法篇/README.md)
+  + [基本语法](语法篇/基本语法.md)
+* [编译篇](编译篇/README.md)
+  + [gcc](编译篇/gcc.md)

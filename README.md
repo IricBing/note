@@ -37,6 +37,7 @@
     - [简介](编程语言/C/简介.md)
     - [环境篇](编程语言/C/环境篇/README.md)
     - [语法篇](编程语言/C/语法篇/README.md)
+    - [编译篇](编程语言/C/编译篇/README.md)
   + [Go](编程语言/Go/README.md)
     - [环境篇](编程语言/Go/环境篇/README.md)
     - [基础篇](编程语言/Go/基础篇/README.md)

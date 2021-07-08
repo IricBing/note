@@ -29,6 +29,7 @@
   + [简介](C/简介.md)
   + [环境篇](C/环境篇/README.md)
   + [语法篇](C/语法篇/README.md)
+  + [编译篇](C/编译篇/README.md)
 
 * [Go](Go/README.md)
   + [环境篇](Go/环境篇/README.md)
