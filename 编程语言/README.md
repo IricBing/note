@@ -26,6 +26,7 @@
   + [基础篇](Rust/基础篇/README.md)
 
 * [C](C/README.md)
+  + [简介](C/简介.md)
   + [环境篇](C/环境篇/README.md)
   + [语法篇](C/语法篇/README.md)
 
