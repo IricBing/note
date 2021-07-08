@@ -2,7 +2,7 @@
 
 **示例**
 
-``` nginx
+```nginx
 map $http_upgrade $connection_upgrade {
     default upgrade;
     '' close;
@@ -23,16 +23,16 @@ server {
 	ssl_certificate_key /home/ubuntu/certs/xxx.xxx.cn/private.key;
 	
 	location / {
-        proxy_pass https://127.0.0.1:3000;
+		proxy_pass https://127.0.0.1:3000;
 		proxy_set_header Host $host;
 		proxy_set_header X-Real-IP $remote_addr;
 		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 		proxy_set_header HTTP_X_FORWARDED_FOR $remote_addr;
 		proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_http_version 1.1;     #新增
-        proxy_set_header Upgrade $http_upgrade;     #新增
-        proxy_set_header Connection $connection_upgrade;       #新增
-        proxy_redirect default;
+		proxy_http_version 1.1;     #新增
+		proxy_set_header Upgrade $http_upgrade;     #新增
+		proxy_set_header Connection $connection_upgrade;       #新增
+		proxy_redirect default;
     }
 }
 ```
