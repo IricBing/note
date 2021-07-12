@@ -139,6 +139,31 @@ $ yarn add -D cross-env
       "windows": {
         "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest current e2e file",
+      "runtimeVersion": "14.17.0", // 这里要按照项目的 .nvmrc文件进行修改！
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "args": [
+        "/${fileBasenameNoExtension}",
+        "--config",
+        "${workspaceFolder}/test/jest-e2e.json",
+        "--runInBand"
+      ],
+      "env": {
+        "DATABASE_DATABASE": "nine_star_e2e",
+        "COMMON_PRINT_USER_ACTIVITY_LOG": "false",
+        "COMMON_PRINT_SYSTEM_LOG": "false",
+        "SMS_AUTH_IP_THROTTLE": "10000"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "windows": {
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      }
     }
   ]
 }
