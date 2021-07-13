@@ -1,4 +1,4 @@
-# NestJS 配置模块案例工程代码讲解
+# `NestJS` 配置模块案例工程代码讲解——基于 `NestJS 7.x`
 
 ## 案例工程地址
 
@@ -7,7 +7,7 @@
 
 ## 项目结构
 
-``` shell
+```shell
 $ tree -a   # 已删除 .git 文件夹
 nestjs-config
     ├── docker-compose.yml
@@ -54,13 +54,13 @@ nestjs-config
 
 按照文档，先生成本地配置文件
 
-``` shell
+```shell
 $ cp .env.development .env
 ```
 
 主要讲解 `src` 文件夹下的文件，其他文件参考[nestjs工程配置](../../工程配置/README.md)
 
-``` shell
+```shell
 $ tree -a 
 src
 ├── app.module.ts   # 主模块
@@ -92,7 +92,7 @@ src
 <details>
 <summary>展开查看源码</summary>
 
-``` typescript
+```typescript
 import * as Joi from 'joi';
 
 /** .env文件校验 */
@@ -145,7 +145,7 @@ export const ConfigValidation = Joi.object({
 
 通过官方文档，会发现 `@nestjs/config` 这个包提供一个 `ConfigService` 的可注入类，并且会将配置文件中的内容注册成属性（当然，需要写 `register` 配置文件，可阅读 `src/modules/config/registers` 目录下的文件来查看实现细节，在此不做展开）。我们在此基础上进行魔改，魔改的原因是因为我们通过其默认的 `ConfigService` 拿到的字段**类型未知**，导致**类型推断不友好**，需要指定**泛型**才行，同时还需要输入字符串来获取。默认方式如下所示：
 
-``` typescript
+```typescript
 this.configService.get<number>('common.jwtExpiresIn');
 ```
 
@@ -153,7 +153,7 @@ this.configService.get<number>('common.jwtExpiresIn');
 <details>
 <summary>展开查看源码</summary>
 
-``` typescript
+```typescript
 import { Injectable } from '@nestjs/common';
 import { ConfigService as NestConfigService } from '@nestjs/config';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
@@ -255,7 +255,7 @@ export class ConfigService {
 
 这样我们在调用的时候就可以通过如下方式了：
 
-``` typescript
+```typescript
 const port = this.configService.common.port;    
 ```
 
@@ -265,7 +265,7 @@ const port = this.configService.common.port;
 
 虽然大体思路已经写完了，但是如何将这些文件组装，以及应用仍需一定的修改。先看一下 `src/modules/config/config.module.ts` 这个文件，内容如下：
 
-``` typescript
+```typescript
 import { Global, Module } from '@nestjs/common';
 import { ConfigModule as NestConfigModule } from '@nestjs/config';
 import { ConfigValidation } from './validations/config.validation';
@@ -302,7 +302,7 @@ export class ConfigModule {}
 
 接下来看一下如何动态配置其他模块，这里拿 `typeorm` 和 `nestjs-redis` 来举例。查看 `src/app.module.ts` 文件，内容如下：
 
-``` typescript
+```typescript
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { RedisModule } from 'nestjs-redis';

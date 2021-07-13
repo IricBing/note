@@ -28,7 +28,7 @@
 
 接下来是兼容容器的 `environment` 配置，根据文档，这个里面写的配置会挂到 `process.env` 中，而 `@nestjs/config` 包将配置文件的内容也是挂载到 `process.env` 中，下面就是搞懂配置优先级了，经过查询探究，发现配置优先级如下：(从左到右，优先级逐渐降低)
 
-``` mermaid
+```mermaid
 graph LR;
     A[容器environment配置] --> B[.env 配置文件];
     B --> C[joi默认配置];
@@ -41,4 +41,5 @@ graph LR;
 
 ## 案例工程代码讲解
 
-[笔记：案例工程代码讲解](案例工程代码讲解.md)
+[笔记：案例工程代码讲解——基于NestJS 8.x](案例工程代码讲解——基于NestJS8.x.md)
+[笔记：案例工程代码讲解——基于NestJS 7.x](案例工程代码讲解——基于NestJS7.x.md)
