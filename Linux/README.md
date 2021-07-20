@@ -1,9 +1,12 @@
-# Linux 篇
-
+# `Linux` 篇
 * [基础篇](基础篇/README.md)
   + [文件系统](基础篇/文件系统/README.md)
     - [文件格式](基础篇/文件系统/文件格式/README.md)
     - [NFS文件系统](基础篇/文件系统/nfs/README.md)
+  + [磁盘](基础篇/磁盘/README.md)
+    - [分区与目录](基础篇/磁盘/分区与目录.md)
+  + [设备](基础篇/设备/README.md)
+    - [串口](基础篇/设备/串口/README.md)
 
 * [Alpine](Alpine/README.md)
   + [容器篇](Alpine/容器篇/README.md)

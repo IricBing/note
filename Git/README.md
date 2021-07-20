@@ -1,4 +1,4 @@
-# Git 篇
+# `Git` 篇
 * [基础用法](基本使用/README.md)
   + [远端仓库相关](基本使用/远端/README.md)
   + [tag相关](基本使用/tag/README.md)  
@@ -10,6 +10,8 @@
     - [python项目配置](基本使用/ignore规则/python项目配置.md)
 
 * [Gitlab](Gitlab/README.md)
+  + [社区版vs企业版](Gitlab/社区版vs企业版.md)
+  + [安装](Gitlab/安装/README.md)
 
 * [Gitea](Gitea/README.md)
   + 安装
