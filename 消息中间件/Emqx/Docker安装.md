@@ -45,6 +45,7 @@ services:
       EMQX_ALLOW_ANONYMOUS: 'false' # 禁止匿名连接
       EMQX_ACL_NOMATCH: deny  # ACL未命中时，拒绝 发布/订阅 操作
       EMQX_ENABLE_ACL_CACHE: 'off'  # 关闭ACL鉴权缓存
+      # http auth 插件配置
       EMQX_AUTH__HTTP__AUTH_REQ__URL: http://127.0.0.1:3000/emqx/auth
       EMQX_AUTH__HTTP__AUTH_REQ__METHOD: post
       EMQX_AUTH__HTTP__AUTH_REQ__CONTENT_TYPE: json
@@ -57,6 +58,22 @@ services:
       EMQX_AUTH__HTTP__ACL_REQ__METHOD: get
       EMQX_AUTH__HTTP__ACL_REQ__CONTENT_TYPE: json
       EMQX_AUTH__HTTP__ACL_REQ__PARAMS: access=%A,username=%u,client_id=%c,ip_address=%a,topic=%t,mount_point=%m,protocol=%r
+      # webhook 插件配置
+      EMQX_WEB__HOOK__URL: http://127.0.0.1:3000/emqx/webhook
+      EMQX_WEB__HOOK__HEADERS__CONTENT-TYPE: application/json
+      EMQX_WEB__HOOK__HEADERS__ACCEPT: '*/*'
+      EMQX_WEB__HOOK__RULE__CLIENT__CONNECT__1: '{"action": "on_client_connect"}'
+      EMQX_WEB__HOOK__RULE__CLIENT__CONNACK__1: '{"action": "on_client_connack"}'
+      EMQX_WEB__HOOK__RULE__CLIENT__CONNECTED__1: '{"action": "on_client_connected"}'
+      EMQX_WEB__HOOK__RULE__CLIENT__DISCONNECTED__1: '{"action": "on_client_disconnected"}'
+      EMQX_WEB__HOOK__RULE__CLIENT__SUBSCRIBE__1: '{"action": "on_client_subscribe"}'
+      EMQX_WEB__HOOK__RULE__CLIENT__UNSUBSCRIBE__1: '{"action": "on_client_unsubscribe"}'
+      EMQX_WEB__HOOK__RULE__SESSION__SUBSCRIBE__1: '{"action": "on_session_subscribed"}'
+      EMQX_WEB__HOOK__RULE__SESSION__UNSUBSCRIBE__1: '{"action": "on_session_unsubscribed"}'
+      EMQX_WEB__HOOK__RULE__SESSION__TERMINATED__1: '{"action": "on_session_terminated"}'
+      EMQX_WEB__HOOK__RULE__MESSAGE__PUBLISH__1: '{"action": "on_message_publish"}'
+      EMQX_WEB__HOOK__RULE__MESSAGE__DELIVERED__1: '{"action": "on_message_delivered"}'
+      EMQX_WEB__HOOK__RULE__MESSAGE__ACKED__1: '{"action": "on_message_acked"}'
 ```
 
 ### 线上部署环境
