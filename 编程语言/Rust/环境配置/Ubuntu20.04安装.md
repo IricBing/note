@@ -9,3 +9,11 @@
 ```shell
 $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
+
+## 升级
+
+因为 `rust` 更新非常频繁，所以需要不定时更新一下自己的版本，更新命令如下：
+
+```shell
+$ rustup update
+```
