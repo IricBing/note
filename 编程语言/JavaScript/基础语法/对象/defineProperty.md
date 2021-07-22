@@ -1,4 +1,4 @@
-# JavaScript Object.defineProperty() 方法
+# `Object.defineProperty()` 方法
 
 [官方文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
 
@@ -8,7 +8,7 @@
 
 ## 语法
 
-``` javascript
+```javascript
 Object.defineProperty(obj, prop, descriptor)
 ```
 

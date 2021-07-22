@@ -1,4 +1,4 @@
-# JavaScript ES2016+ 各版本新特性
+# `JavaScript ES2016+` 各版本新特性
 
 ## 前言
 
@@ -34,3 +34,5 @@
   + [Array.prototype.flatMap()](ES2019/Array.prototype.flatMap.md)
 
 * [ES2020](ES2020/README.md)
+
+* [ES2021](ES2021/README.md)

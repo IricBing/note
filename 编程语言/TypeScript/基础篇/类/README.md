@@ -1,1 +1,1 @@
-# Typescript 类
+# `Typescript` 类
