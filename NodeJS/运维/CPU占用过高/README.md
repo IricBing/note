@@ -129,7 +129,7 @@ Statistical profiling result from isolate-0x555cb25a7d60-1-v8.log, (61102 ticks,
 
 ```mermaid
 graph LR;
-    Controller --> Service --> A["DB/server"];
+  A[Controller] --> B[Service] --> C["DB/server"];
 ```
 
 所以大概率出现问题的部分就是 `service` 文件。那么在分析火焰图和 `profile` 文件的时候，就可以通过 `搜索` 来辅助定位，最开始搜索 `services` 关键字，很明显就能找到问题所在。
