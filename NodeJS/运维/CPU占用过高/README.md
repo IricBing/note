@@ -22,7 +22,7 @@
 
 在启动 `node` 服务的时候加上 `--prof` 参数，如下所示：
 
-``` shell
+```shell
 $ node --prof dist/main.js
 ```
 
@@ -30,7 +30,7 @@ $ node --prof dist/main.js
 
 运行一段时间后将这个文件拿到，但是这个文件是不能直接看的，看不懂，可以打开看一下里面的内容大致如下：
 
-``` log
+```log
 v8-version,8,4,371,19,-node.17,0
 shared-library,/usr/local/bin/node,0x555cadf79000,0x555cafa23000,0
 shared-library,/usr/local/bin/node,0x555cadf79000,0x555cafb7a000,0
@@ -68,7 +68,7 @@ code-creation,Builtin,3,7695,0x555caf0f0be0,926,CallWithArrayLike
 
 首先介绍火焰图方式，这个由于可视化，所以比较好看。
 
-``` shell
+```shell
 $ npm install -g flamebearer    # 全局安装flamebearer包
 
 $ node --prof-process --preprocess -j isolate*.log | flamebearer    # 使用flamebearer包生成火焰图
@@ -80,13 +80,13 @@ $ node --prof-process --preprocess -j isolate*.log | flamebearer    # 使用flam
 
 通过node自带的分析诊断功能，得到log日志。
 
-``` shell
+```shell
 $ node --prof-process isolate*.log > process.txt
 ```
 
 以上命令能够生成process.txt日志文件，打开后内容大致如下：
 
-``` log
+```log
 Statistical profiling result from isolate-0x555cb25a7d60-1-v8.log, (61102 ticks, 81 unaccounted, 0 excluded).
 
  [Shared libraries]:
@@ -127,9 +127,9 @@ Statistical profiling result from isolate-0x555cb25a7d60-1-v8.log, (61102 ticks,
 
 架构规范流程如下：
 
-``` mermaid
+```mermaid
 graph LR;
-    Controller --> Service --> DB/server;
+    Controller --> Service --> A["DB/server"];
 ```
 
 所以大概率出现问题的部分就是 `service` 文件。那么在分析火焰图和 `profile` 文件的时候，就可以通过 `搜索` 来辅助定位，最开始搜索 `services` 关键字，很明显就能找到问题所在。
