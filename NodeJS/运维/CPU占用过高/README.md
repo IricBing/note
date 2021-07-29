@@ -128,7 +128,7 @@ Statistical profiling result from isolate-0x555cb25a7d60-1-v8.log, (61102 ticks,
 架构规范流程如下：
 
 ```mermaid
-graph TD;
+graph LR
   A[Controller] --> B[Service] --> C["DB/server"];
 ```
 
