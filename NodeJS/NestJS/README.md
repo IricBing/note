@@ -1,5 +1,4 @@
 # NestJS 篇
-
 * [工程配置](工程配置/README.md)
 
 * [容器镜像篇](容器镜像篇/README.md)
@@ -33,6 +32,7 @@
 * [原理探究](原理探究/README.md)
   + [依赖注入](原理探究/依赖注入/README.md)
   + [AOP(切面编程)](原理探究/AOP/README.md)
+  + [守卫](原理探究/守卫/README.md)
 
 * [实践积累](实践积累/README.md)
   + [支持XML传参](实践积累/支持XML传参.md)
