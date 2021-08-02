@@ -18,7 +18,7 @@ $ gvm install go1.16
 $ gvm use go1.16 --default
 
 # 安装完成，验证
-$ gvm version
+$ go version
 go version go1.16 linux/amd64
 ```
 

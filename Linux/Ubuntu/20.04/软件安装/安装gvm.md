@@ -24,6 +24,31 @@ Please restart your terminal session or to get started right away run
 $ source /home/iric/.gvm/scripts/gvm
 ```
 
+## 编辑环境配置文件
+
+编辑 `~/.zshrc` 或者 `~/.bashrc` 文件，在文件末尾追加 `GO_BINARY_BASE_URL` 环境变量
+
+```conf
+# gvm 配置
+export GO_BINARY_BASE_URL="https://mirrors.ustc.edu.cn/golang"
+```
+
+> 采坑提示：在 `Gitee` 上，有仓库的 `README` 提示要配置 `G_MIRROR` 环境变量，实际并不好使！官方 `issue` 中已经有讲到如何配置镜像地址了：[issue地址](https://github.com/moovweb/gvm/issues/192)
+
+## 安装 `go` (1.5+)
+
+```shell
+$ gvm install go1.4 -B
+$ gvm use go1.4
+$ export GOROOT_BOOTSTRAP=$GOROOT
+$ gvm install go1.16
+$ gvm use go1.16 --default
+
+# 安装完成，验证
+$ go version
+go version go1.16 linux/amd64
+```
+
 ## 配置代理
 
 生在天朝，你懂得
