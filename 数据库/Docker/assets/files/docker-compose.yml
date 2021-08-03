@@ -8,13 +8,13 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 123456
-      POSTGRES_DB: iot
+      POSTGRES_DB: nine_star
       TZ: Asia/Shanghai
       PGTZ: Asia/Shanghai
     ports:
       - 5432:5432
     volumes:
-      - ./pg-data:/var/lib/postgresql/data
+      - pg-data:/var/lib/postgresql/data
 
   pgadmin:
     image: dpage/pgadmin4:latest
@@ -35,7 +35,7 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - ./mongo-data:/data
+      - mongo-data:/data
       - /etc/localtime:/etc/localtime:ro
 
   redis:
@@ -46,7 +46,7 @@ services:
     ports:
       - 6379:6379
     volumes:
-      - ./redis-data:/data
+      - redis-data:/data
       - /etc/localtime:/etc/localtime:ro
     environment:
       # - REDIS_PASS=mypassword
@@ -62,5 +62,11 @@ services:
     ports:
       - 9200:9200
     volumes:
-      - ./elasticsearch-data:/usr/share/elasticsearch/data
+      - elasticsearch-data:/usr/share/elasticsearch/data
       - /etc/localtime:/etc/localtime:ro
+
+volumes:
+  pg-data:
+  mongo-data:
+  redis-data:
+  elasticsearch-data:

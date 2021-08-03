@@ -1,8 +1,19 @@
-# Windows 10 安装Docker
+# `Windows 10` 安装 `Docker`
 
-## 下载Docker Desktop
+## 下载 `Docker Desktop`
 
-直接去官网下载安装即可
+直接去官网下载即可，官网[下载地址](https://www.docker.com/products/docker-desktop)
+
+## 修改安装地址
+
+由于 `Docker Desktop Installer` 的**默认安装地址**为 `C盘` ，**也不让选择**，因此我们需要先设置一个 `软连接` ，将 `C:\Program Files\Docker` 指到 `E盘` 下面，这样之后再安装的时候就直接安装到 `E盘` 了（需要先建立： `E:\Program Files\Docker` 文件夹）
+
+```shell
+$ mklink /j "C:\Program Files\Docker" "E:\Program Files\Docker"
+Junction created for C:\Program Files\Docker <<===>> E:\Program Files\Docker
+```
+
+> 提示：此命令**必须以管理员身份运行 `CMD` 才可以**，普通用户是没有权限的。
 
 ## 数据文件迁移
 
@@ -12,7 +23,7 @@
 
 `docker desktop` 在安装的时候创建两个 `wsl` 子系统。分别是： `docker-desktop` 和 `docker-desktop-data` 。通过命令 `wsl -l -v --all` 来查看一下当前系统中的 `wsl` 子系统。
 
-``` shell
+```shell
 $ wsl -l -v --all
   NAME                   STATE           VERSION
 
@@ -26,40 +37,37 @@ $ wsl -l -v --all
 
 `docker-desktop` 是存放程序的， `docker-desktop-data` 是存放镜像的，这两个 `wsl` 子系统都是默认放在**系统盘**的。
 
+[官方issue](https://github.com/docker/for-win/issues/5829#issuecomment-622442186)
+
+> 官方 `issue` 的意思是只需要迁移 `docker-desktop-data` 这个 `wsl` 系统即可， `docker-desktop` 并不必进行迁移。
+
 ### 迁移
 
 首先将**Docker停止**，有正在运行的容器也全部停掉。
 
 #### `Step1.` 导出 `wsl` 子系统镜像
 
-打开 `cmd` 终端，注意下面两条命令会在当前位置生成两个文件： `docker-desktop.tar` 和 `docker-desktop-data.tar` ，所以还是找一个特定的位置打开 `cmd` 吧。
+打开 `cmd` 终端，注意下面两条命令会在当前位置生成一个文件： `docker-desktop-data.tar` ，所以还是找一个特定的位置打开 `cmd` 吧。
 
-``` shell
-$ wsl --export docker-desktop docker-desktop.tar
-
+```shell
 $ wsl --export docker-desktop-data docker-desktop-data.tar
 ```
 
-> 如果正常，应该会在此文件夹下看到两个文件：： `docker-desktop.tar` 和 `docker-desktop-data.tar`
+> 如果正常，应该会在此文件夹下看到一个文件：： `docker-desktop-data.tar`
 
 #### `Step2.` 删除现有的 `wsl` 子系统
 
-``` shell
-$ wsl --unregister docker-desktop
-正在注销...
-
+```shell
 $ wsl --unregister docker-desktop-data
 正在注销...
 ```
 
 #### `Step3.` 重新创建 `wsl` 子系统
 
-先在想要放置数据的位置创建两个文件夹，我是在 `E盘` 下创建了 `DockerDesktop` 和 `DockerDesktopData` 两个文件夹，分别用来存储 `docker-desktop` 和 `docker-desktop-data` 两个 `wsl` 子系统数据的。
+先在想要放置数据的位置创建个文件夹，我是在 `E盘` 下创建了 `DockerDesktopData` 文件夹，用来存储 `docker-desktop-data`  `wsl` 子系统数据的。
 
-``` shell
-$ wsl --import docker-desktop e:\DockerDesktop docker-desktop.tar
-
-$ wsl --import docker-desktop-data e:\DockerDesktopData docker-desktop-data.tar
+```shell
+$ wsl --import docker-desktop-data E:\DockerDesktopData E:\docker-desktop-data.tar --version 2
 ```
 
-#### `Step4.` 重启系统
+#### `Step4.` 重启电脑

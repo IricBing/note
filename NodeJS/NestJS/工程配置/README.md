@@ -264,7 +264,8 @@ $ yarn add -D cross-env
   "semi": true,
   "printWidth": 160,
   "bracketSpacing": true,
-  "arrowParens": "avoid"
+  "arrowParens": "avoid",
+  "endOfLine":"auto"
 }
 ```
 
