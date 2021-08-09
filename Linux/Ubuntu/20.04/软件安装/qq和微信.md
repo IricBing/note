@@ -4,17 +4,19 @@
 
 ### 打开终端，输入
 
-``` bash
+```bash
 $ wget -O- https://deepin-wine.i-m.dev/setup.sh | sh
 ```
 
 ### 安装qq和微信
 
-``` bash
+```bash
 $ sudo apt install deepin.com.wechat
 	
 $ sudo apt install deepin.com.qq.im
 ```
+
+> 所支持的软件列表：https://deepin-wine.i-m.dev/
 
 ## Docker方式—— 推荐
 
@@ -24,7 +26,7 @@ $ sudo apt install deepin.com.qq.im
 
 **用法**
 
-``` shell
+```shell
 $ curl -sL https://raw.githubusercontent.com/huan/docker-wechat/master/dochat.sh | bash
 or
 $ docker run \
