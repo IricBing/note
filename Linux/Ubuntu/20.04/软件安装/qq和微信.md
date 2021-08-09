@@ -1,6 +1,6 @@
 # Ubuntu 20.04 安装qq和微信
 
-## wine方式
+## `wine` 方式
 
 ### 打开终端，输入
 
@@ -18,7 +18,7 @@ $ sudo apt install deepin.com.qq.im
 
 > 所支持的软件列表：https://deepin-wine.i-m.dev/
 
-## Docker方式—— 推荐
+## `Docker` 方式—— 推荐
 
 ### 安装微信
 
